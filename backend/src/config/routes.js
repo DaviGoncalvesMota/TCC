@@ -8,4 +8,8 @@ module.exports = function(server) {
     //USER Routes
     const userService = require('../api/user/userService')
     userService.register(router, '/users')
+
+    //Produto Routes
+    const produtoService = require('../api/produto/produtoService')
+    produtoService.register(router, '/produtos')
 }
