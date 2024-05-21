@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/052246b3-6dfb-4104-957a-9d14d2d83a68/resourceGroups/bresta/providers/Microsoft.Web/sites/bresta",
+    "appService.deploySubpath": "."
+}

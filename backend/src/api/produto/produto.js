@@ -2,11 +2,11 @@ const restful = require('node-restful')
 const mongoose = restful.mongoose
 
 const produtoSchema = new mongoose.Schema({
-    nome: {type: String, required: true}, //usar em todos
-    telefone: {type: String, required: true}, //usar em todos
-    OndeAchado: {type: String, required: true}, //usar somente nos achados
-    OndePerdido: {type: String, required: false}, //usar somente nos perdidos
-    Relevancia: {type: String, required: false}, //usar em todos
+    nome: {type: String, required: true}, 
+    telefone: {type: String, required: true},
+    local: {type: String, required: true},
+    ondeEncontrar: {type: String, required: true},
+    descricao: {type: String, required: false}, 
     
 })
 
