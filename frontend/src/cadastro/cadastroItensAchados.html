@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> cadastro de achados</title>
 </head>
+
 <body>
 
     <form id="form-api">
         <label> Qual é o seu nome e turma?? </label>
         <br>
-        <input type="text" placeholder="seu Nome e turma" name="nome" />
+        <input type="text" placeholder="seu Nome e turma" name="nome" required />
         <br>
         <label> Aonde achou o item??</label>
         <br>
-        <input type="text" placeholder="local" name="local" />
+        <input type="text" placeholder="local" name="local" required />
         <br>
         <label> Seu Numero de Contato </label>
         <br>
-        <input type="tel" placeholder="Numero" name="telefone" />
+        <input type="tel" placeholder="Numero" name="telefone" required />
         <br>
         <label> Aonde o item se encontra </label>
         <br>
         <select name="ondeEncontrar">
-                <option> Secretaria </option>
-                <option> Com a Minha pessoa </option>
+            <option> Secretaria </option>
+            <option> Com a Minha pessoa </option>
         </select>
         <br>
         <label> Descrição item </label>
         <br>
-        <input type="text" placeholder="Descrição" name="descricao" />
+        <input type="text" placeholder="Descrição" name="descricao" required />
         <br>
         <br>
-        <button type="submit"> Enviar </button>
+        
+        <input type="submit" value="Enviar">
+
     </form>
 
+    <script src="../constantes.js"></script>
     <script src="cadastroItensAchados.js"></script>
 </body>
+
 </html>

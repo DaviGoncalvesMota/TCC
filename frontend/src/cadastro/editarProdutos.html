@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="form-api">
+        <input type="hidden" id="_id"/>
+        <label> Seu Numero de Contato </label>
+        <br>
+        <input type="tel" placeholder="Numero" name="telefone" id="telefone"/>
+        <br>
+        <label> Aonde o item se encontra </label>
+        <br>
+        <select name="ondeEncontrar" id="ondeEncontrar">
+            <option> Secretaria </option>
+            <option> Com a Minha pessoa </option>
+        </select>
+        <br>
+        <label> Descrição item </label>
+        <br>
+        <input type="text" placeholder="Descrição" name="descricao" id="descricao" />
+        <br>
+        <br>
+
+        <input type="submit" value="enviar">
+    </form>
+
+    <script src="editarProdutos.js"></script>
+    <script src="../constantes.js"></script>
+</body>
+
+</html>

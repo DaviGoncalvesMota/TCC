@@ -1,19 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Inicial</title>
+    <link rel="stylesheet" href="../cssGeral/style.css">
+    <link rel="stylesheet" href="../whatz/index.php">
+    <link rel="stylesheet" href="../whatz/whatz.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../telaCarregamento/telaCarregar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+    <title>Achados e perdidos</title>
 </head>
+
 <body>
 
-    <a href="../cadastro/cadastroItensAchados.html" target="_blank"> Ir para cadastro </a>
-
-    <div id="produtos">
+    <!-- Tela de Carregamento -->
+    <div id="loader" class="overlay">
+        <div class="loader"></div>
     </div>
 
-    <script src="main.js"></script>
-    <script src="mostrarProdutos.js"></script>
 
+    <!-- Conteudo da pagina -->
+    <div id="content" style="display: none;">
+        <header>
+            <div class="logo">Achados e Perdidos </div>
+
+
+            <input type="checkbox" id="nav_check" hidden>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Informações</a>
+                    </li>
+
+                    <li>
+                        <a href="telaAchados.html"> Achados </a>
+                    </li>
+                    <li>
+                        <a href="#">Perdidos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contatos</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <label for="nav_check" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </header>
+        <!-- corpo -->
+
+
+
+
+
+        <div class="section">
+            <div class="cont2">
+
+
+                <div class="fund2">
+                    <div class="text-content">
+                        <h1 class="title">Sejam Bem-vindos </h1>
+                        <p class="sub">Sejam bem-vindos ao Achados e Perdidos da Empresa Bresta.<br><br>
+                            Neste site, valorizamos principalmente a experiência de nossos clientes e a proteção de seus
+                            itens perdidos<br><br>
+                            Nosso foco é estar presente nas Escolas Técnicas Estaduais (ETECs). Contamos com a sua
+                            colaboração para tornar o nosso site seguro e confiável para os nossos usuários.<br><br>
+                            Em caso de dúvidas, não hesite em entrar em contato conosco.<br>
+
+                        </p>
+                    </div>
+                    <br>
+
+
+                </div>
+                <a class="bt" href="https://contate.me/bresta" target="_blank"> Fale conosco</a>
+            </div>
+
+
+
+
+
+            <img class="lg" src="../imagens/logobrest.png" alt="">
+
+
+        </div>
+
+
+
+
+
+        <!-- Botão whatsapp-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://wa.me/5511958882218?text=Ol%C3%A1%2C+cheguei+at%C3%A9+aqui+atrav%C3%A9s+de+seu+site."
+            target="_blank">
+            <div class="btn-whatsapp pulsaDelay"><i class="fa fa-whatsapp"></i></div>
+        </a>
+        <!--Botão whatsapp -->
+    </div>
+
+
+
+
+
+    <script src="../telaCarregamento/add.js"></script>
+    <script src="../telaCarregamento/telaCarregar.js"></script>
 </body>
+
 </html>
