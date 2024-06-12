@@ -16,7 +16,7 @@ function logar() {
             var usuario = data[0];
             if (usuario.senha == senha) {
                 localStorage.setItem('nome', usuario.nome);
-                localStorage.setItem('_id', usuario._id)
+                localStorage.setItem('id', usuario._id)
 
                 window.location.href = "../paginas/paginaPrincipal.html"
             } else {
