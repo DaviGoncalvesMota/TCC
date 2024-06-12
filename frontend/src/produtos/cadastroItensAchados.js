@@ -12,6 +12,6 @@ form.addEventListener('submit', evento => {
             'content-type' : 'application/json'
         },
         body: JSON.stringify(data)
-    }).then(res => res.json()).then(data => window.location.href = '../principal/telaAchados.html')
+    }).then(res => res.json()).then(data => window.location.href = '../paginas/paginaAchados.html')
 })
 

@@ -41,15 +41,19 @@ header {
 
 
 /* menu */
-header .logo {
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    color: white;
-}
+
+    header .logo {
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        color: white;
+        width: 17.8rem;
+    }
+
 
 header nav ul {
     display: flex;
 }
+
 
 header nav ul li a {
     display: inline-block;
@@ -60,6 +64,7 @@ header nav ul li a {
     text-transform: uppercase;
     transition: 0.2s;
 }
+
 
 
 header nav ul li a:hover,

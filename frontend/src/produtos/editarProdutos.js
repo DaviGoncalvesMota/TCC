@@ -14,10 +14,11 @@ form.addEventListener('submit', evento => {
             'content-type' : 'application/json'
         },
         body: JSON.stringify(data)
-    }).then(res => res.json()).then(data =>  window.location.href = '../principal/telaAchados.html')    
+    }).then(res => res.json()).then(data =>  window.location.href = '../paginas/paginaAchados.html')    
 })
 
 window.addEventListener('load', evento => {
+    
     const queryString = window.location.search;
     const id = queryString.replace("?id=", "");
 

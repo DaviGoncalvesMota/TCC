@@ -1,0 +1,123 @@
+
+
+p {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+
+}
+
+h3 {
+    font-size: 2.3rem;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+}
+
+.cente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.bt {
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    transition: 1s;
+    background-color: #A3C2FF;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 0.6rem;
+}
+a.bt
+{
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+}
+
+
+.bt:hover {
+    transform: scale(1.2);
+    z-index: 1;
+    
+}
+
+
+
+.regu {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+   color: #A3C2FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.secao4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    gap: 0.3rem;
+    font-family: Helvetica, sans-serif;
+
+}
+
+.secao4-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+ 
+}
+
+
+
+.secao4-div-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3 - 60px);
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: #A3C2FF;
+    transition: all 0.5s ease;
+    gap: 1rem;
+    padding: 3rem;
+}
+
+.secao4-div-card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.secao4-div-card img {
+    width: 35%;
+    height: auto;
+}
+
+.secao4-div-card h3 {
+    margin-bottom: 0px;
+}
+
+ 
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .secao4-div-card {
+        width: 100%;
+    }
+}

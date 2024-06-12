@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body
+{
+    background-color: #141B3E;
+    background-size: cover;
+}
+
+
+/* barra de pesquisa */
+
+#divBusca {
+    background-color: #ffffffec;
+    border: solid 1px;
+    border-radius: 15px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+#pesquisa {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    height: 32px;
+    width: 260px;
+
+}
+
+.lp{
+    width: 1.5rem;
+}
+
+.cont1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
