@@ -14,9 +14,10 @@ function exibirDadosNaTela(listaDeProdutos) {
                         <p> ${produto.local} </p>
                         <p> ${produto.descricao} </p>
                         <p> ${produto.ondeEncontrar}</p>
-                        <button onclick="deletar('${produto._id}');"> Excluir </button>
+                        <p> ${produto.userName}</p>
+                        <button class="btn" onclick="deletar('${produto._id}');"> Excluir </button>
                         <a href="../paginas/paginaEditarProdutos.html?id=${produto._id}">
-                            <button> Editar </button> 
+                            <button class="btn" > Editar </button> 
                         </a>
                     </div>
                 </div>  

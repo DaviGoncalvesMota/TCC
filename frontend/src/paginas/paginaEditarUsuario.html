@@ -4,28 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../cssGeral/login.css">
+
     <title>Editar Usuario </title>
 </head>
 
 <body>
-    <form id="form-editar">
-        <label> Nome: </label>
-        <input type="text" placeholder="digite seu nome..." id="nome" name="nome" />
-        <br>
-        <label> email: </label>
-        <input type="email" placeholder="digite seu email..." id="email" name="email" />
-        <br>
-        <label> Senha: </label>
-        <input type="password" placeholder="digite sua Senha..." id="senha" name="senha" />
-        <br>
+    <div class="section">
+        <div class="container">
+            <div class="row full-height justify-content-center">
+                <div class="col-12 text-center align-self-center py-5">
+                    <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                      
+                     
+                        <label for="reg-log"></label>
+                        <div class="card-3d-wrap mx-auto">
+                            <div class="card-3d-wrapper">
+                                <div class="card-front">
+                                    <div class="center-wrap">
+                                        <div class="section text-center">
+                                            <h4 class="mb-4 pb-3">Login</h4>
+                                            <div class="form-group">
 
-        <input type="submit" value="enviar" />
-    </form>
 
-    <a href="javascript:history.back()"> Voltar </a>
+                                                <form id="form-editar">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-style"
+                                                            placeholder="digite seu nome..." id="nome" name="nome" />
+                                                        <i class="input-icon uil uil-user"></i>
+                                                        <br>
+                                                    </div>
 
-    <script src="../constantes.js"></script>
-    <script src="../usuarios/editarUsuario.js"></script>
+
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-style"
+                                                            placeholder="digite seu email..." id="email" name="email" />
+                                                        <i class="input-icon uil uil-at"></i>
+                                                        <br>
+                                                    </div>
+                                                    <div class="form-group mt-2">
+
+                                                        <input type="password" class="form-style"
+                                                            placeholder="digite sua Senha..." id="senha" name="senha" />
+                                                        <br>
+                                                        <i class="input-icon uil uil-lock-alt"></i>
+                                                    </div>
+                                                        <input class="btn mt-4" type="submit" value="enviar" />
+                                                </form>
+
+
+                                             
+
+                                                <script src="../constantes.js"></script>
+                                                <script src="../usuarios/editarUsuario.js"></script>
+
+
 </body>
 
 </html>

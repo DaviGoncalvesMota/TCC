@@ -4,12 +4,11 @@ footer {
   padding: 29px 2px;
   font-family: 'Montserrat', monospace;
   font-weight: bold;
-  margin-top: 16vh;
+  margin-top: 4vh;
   position: absolute;
   z-index: -1;
   width: 100%;
 }
-
 .regu {
   text-align: center;
   margin-top: 1rem;

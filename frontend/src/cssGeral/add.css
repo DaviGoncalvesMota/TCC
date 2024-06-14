@@ -1,0 +1,46 @@
+.btn-whatsapp a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: -17px;
+    bottom: -5px;
+    transform: translate(-50%, -50%);
+    background-color: #222a52;
+    border: 2px solid white;
+    width: 60px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    font-size: 1.8em;
+    color: #ffffff;
+    font-weight: 100;
+    border-radius: 50%;
+}
+
+
+.pulsaDelay:after {
+    animation-delay: .5s;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}

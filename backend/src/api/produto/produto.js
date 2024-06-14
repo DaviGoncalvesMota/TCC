@@ -7,6 +7,8 @@ const produtoSchema = new mongoose.Schema({
     local: {type: String, required: true},
     ondeEncontrar: {type: String, required: true},
     descricao: {type: String, required: false}, 
+    userName: {type: String, required: false},
+    userId: {type: String, required: false}
     
 })
 

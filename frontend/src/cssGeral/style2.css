@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap'); 
+
+
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+
+.prod {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+}
+
+
+.fund {
+    
+    margin-left: 40%;
+    width: 400px;
+    height: 620px;
+    border-radius: 15px;
+    background-color: #202020;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+
+
+}
+
+
+
+.text2
+{
+    font-family: 'poppins', sans-serif;
+    color: rgba(216, 216, 216);
+    font-weight: 300;
+    text-align: center;
+    font-size: 20px;
+   
+    
+}
+
+.text1
+{
+    color: cadetblue;
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+    font-size: 30px;
+    
+   
+}
+
+
+.btn
+{
+  
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    transition: 1s;
+    background-color: aliceblue;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+}
+
+.btn:hover
+{
+    transition: 1s;
+}
+
+@media (max-width: 768px) {
+  
+    .fund{
+       margin-left: 1em;
+       width: 90%;
+      height: 90%;
+    }
+
+
+    }
+
+    
+
+    
