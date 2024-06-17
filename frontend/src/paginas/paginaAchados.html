@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../cssGeral/achados.css">
     <link rel="stylesheet" href="../cssGeral/style.css">
     <link rel="stylesheet" href="../cssGeral/add.css">
-    <link rel="stylesheet" href="../whatz/index.php">
     <link rel="stylesheet" href="../cssGeral/contato.css">
     <link rel="icon" href="../imagens/icon.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -24,83 +23,81 @@
 
 <body>
 
-    <header>
-        <a href="#"><img class="logo" src="../imagens/logo.png" alt=""></a>
+        <header>
+            <a href="#"><img class="logo" src="../imagens/logo.png" alt=""></a>
 
 
-        <input type="checkbox" id="nav_check" hidden>
+            <input type="checkbox" id="nav_check" hidden>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="../paginas/paginaPrincipal.html">Home</a>
-                </li>
-                <li>
-                    <a href="#">Informações</a>
-                </li>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../paginas/paginaPrincipal.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Informações</a>
+                    </li>
 
-                <li>
-                    <a href="#" class="active"> Achados </a>
-                </li>
-                <li>
-                    <a href="#">Perdidos</a>
-                </li>
-                <li>
-                    <a href="#">Contatos</a>
-                </li>
-                <li>
-                    <a href="../paginas/paginaEditarUsuario.html" id="nome"> </a>
-                </li>
-            </ul>
-        </nav>
+                    <li>
+                        <a href="#" class="active"> Achados </a>
+                    </li>
+                    <li>
+                        <a href="#">Perdidos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contatos</a>
+                    </li>
+                    <li>
+                        <a onclick="editarPerfil();" id="nome"> </a>
+                    </li>
+                </ul>
+            </nav>
 
-        <label for="nav_check" class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </label>
-    </header>
-
-
-  <br>
+            <label for="nav_check" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </header>
 
 
+        <br>
 
-    <div class="cont1">
-        <div id="divBusca">
-            <input type="text" id="pesquisa" placeholder="Buscar..." />
-            
+
+
+        <div class="cont1">
+            <div id="divBusca">
+                <input type="text" id="pesquisa" placeholder="Buscar..." />
+
+            </div>
         </div>
-    </div>
 
 
 
-    
 
-    <div style="display: flex; flex-wrap:wrap; flex-direction: row; justify-content: center;" id="produtos">
-    </div>
+
+        <div style="display: flex; flex-wrap:wrap; flex-direction: row; justify-content: center;" id="produtos">
+        </div>
 
 
 
         <!-- Botão whatsapp-->
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <a href="../paginas/paginaCadastroProdutos.html"
-            target="_blank">
-            <div class="btn-whatsapp pulsaDelay"><i class='bx bx-plus bx-flip-horizontal' style='color:#ffffff'  ></i></div>
-        </a>
+        <div style="cursor: pointer;" onclick="botaoCadastro();">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <div class="btn-whatsapp pulsaDelay"><i class='bx bx-plus bx-flip-horizontal' style='color:#ffffff'></i>
+            </div>
+        </div>
         <!--Botão whatsapp -->
 
         <footer id="cont">
             <div class="conta">
-    
+
                 <div class="contato-container">
-    
+
                     <h1>Entre em contato conosco</h1>
-    
+
                     <div class="links-btn">
-                        <a href="https://contate.me/bresta" 
-                            target="_blank">
+                        <a href="https://contate.me/bresta" target="_blank">
                             <i class="bx bxl-whatsapp"></i>
                         </a>
                         <a href="https://www.instagram.com/_bresta?igsh=MWZobHdsajBpMG1saQ==" target="_blank">
@@ -109,11 +106,10 @@
                         <a href="mailto:brestatcc@gmail.com" target="_blank">
                             <i class='bx bxl-gmail'></i>
                         </a>
-    
+
                     </div>
                 </div>
         </footer>
-
 
     <script src="../constantes.js"></script>
     <script src="../produtos/apiProdutos.js"></script>
@@ -122,4 +118,5 @@
     <script src="../usuarios/apiUsuarios.js"></script>
     <script src="../usuarios/mostrarPerfil.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-async function deletar(id, evento) {
+async function deletar(id) {
     let confirmar = window.confirm('deseja deletar??')
 
     if (confirmar == true) {

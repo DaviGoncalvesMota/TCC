@@ -63,6 +63,7 @@ header nav ul li a {
     border: 3px solid transparent;
     text-transform: uppercase;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 

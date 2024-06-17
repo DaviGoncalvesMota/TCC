@@ -6,28 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../cssGeral/style.css">
-    <link rel="stylesheet" href="../whatz/index.php">
-    <link rel="stylesheet" href="../whatz/whatz.css">
     <link rel="stylesheet" href="../cssGeral/produtos.css">
     <link rel="stylesheet" href="../cssGeral/contatohome.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" href="../imagens/icon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="../telaCarregamento/telaCarregar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
     <title>Achados e Perdidos</title>
 </head>
 
 <body>
-    <!-- Tela de Carregamento -->
-    <div id="loader" class="overlay">
-        <div class="loader"></div>
-    </div>
 
-
-    <!-- Conteudo da pagina -->
-    <div id="content" style="display: none;">
         <header>
             <a href="#"><img class="logo" src="../imagens/logo.png" alt=""></a>
 
@@ -53,7 +43,7 @@
                         <a href="#">Contatos</a>
                     </li>
                     <li>
-                        <a href="../paginas/paginaEditarUsuario.html" id="nome"> </a>
+                        <a onclick="editarPerfil();" id="nome"> </a>
                     </li>
                 </ul>
             </nav>
@@ -103,17 +93,6 @@
         </div>
 
 
-
-
-
-        <!-- Botão whatsapp-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <a href="https://wa.me/5511958882218?text=Ol%C3%A1%2C+cheguei+at%C3%A9+aqui+atrav%C3%A9s+de+seu+site."
-            target="_blank">
-            <div class="btn-whatsapp pulsaDelay"><i class="fa fa-whatsapp"></i></div>
-        </a>
-        <!--Botão whatsapp -->
-
         <footer id="cont">
             <div class="conta">
     
@@ -136,16 +115,10 @@
                     </div>
                 </div>
         </footer>
-    </div>
-
-
-
 
 
 
     <script src="../constantes.js"></script>
-    <script src="../telaCarregamento/add.js"></script>
-    <script src="../telaCarregamento/telaCarregar.js"></script>
     <script src="../usuarios/apiUsuarios.js"></script>
     <script src="../usuarios/mostrarPerfil.js"></script>
 
