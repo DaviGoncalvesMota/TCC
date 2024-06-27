@@ -1,94 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <script src="https://unpkg.com/@phosphor-icons/web"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../cssGeral/login.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> cadastro de achados</title>
-    </head>
+<head>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../cssGeral/cadastro.css">
+    <link rel="icon" href="../imagens/icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> cadastro de achados</title>
+</head>
 
-    <body>
-        <div class="section">
-            <div class="container">
-                <div class="row full-height justify-content-center">
-                    <div class="col-12 text-center align-self-center py-5">
-                        <div class="section pb-5 pt-5 pt-sm-2 text-center">
-
-
-                            <label for="reg-log"></label>
-                            <div class="card-3d-wrap mx-auto">
-                                <div class="card-3d-wrapper">
-                                    <div class="card-front">
-                                        <div class="center-wrap">
-                                            <div class="section text-center">
-                                                <h4 class="mb-4 pb-3"> Adicionar item achado </h4>
-                                                <div class="form-group">
-
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="row full-height justify-content-center">
+                <div class="col-12 text-center align-self-center py-5">
+                    <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                        <label for="reg-log"></label>
+                        <div class="card-3d-wrap mx-auto">
+                            <div class="card-3d-wrapper">
+                                <div class="card-front">
+                                    <div class="center-wrap">
+                                        <div class="section text-center">
+                                            <h4 class="mb-4 pb-3"> Adicionar item achado </h4>
+                                            <div class="form-group">
 
 
 
-                                                    <form id="form-api">
+
+                                                <form id="form-api">
 
 
-                                                        <input type="hidden" id="userId" name="userId" />
-                                                        <input type="hidden" id="userName" name="userName" />
+                                                    <input type="hidden" id="userId" name="userId" />
+                                                    <input type="hidden" id="userName" name="userName" />
 
 
-                                                        <div class="form-group mt-2">
-                                                            <input type="text" class="form-style"
-                                                                placeholder="Nome do produto" name="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required />
-                                                            <i class="input-icon ph ph-user"></i>
-                                                        </div>
+                                                    <div class="form-group mt-2">
+                                                        <input type="text" class="form-style"
+                                                            placeholder="Nome do produto" name="nome"
+                                                            pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
+                                                            required />
+                                                        <i class="input-icon ph ph-bag"></i>
+                                                    </div>
 
 
-                                                        <div class="form-group mt-2">
-                                                            <input type="text" class="form-style" placeholder="local"
-                                                                name="local" required />
-                                                            <i class="input-icon ph ph-map-pin"></i>
-                                                        </div>
+                                                    <div class="form-group mt-2">
+                                                        <input type="text" class="form-style" placeholder="local"
+                                                            name="local" required />
+                                                        <i class="input-icon ph ph-map-pin"></i>
+                                                    </div>
+
+                                                    <div class="form-group mt-2">
+                                                        <input type="tel" minlength="11" maxlength="11"
+                                                            class="form-style" placeholder="Numero" name="telefone"
+                                                            id="telefone" pattern="[0-9]+$" required />
+                                                        <i class="input-icon ph ph-phone"></i>
+                                                    </div>
 
 
-
-                                                        <div class="form-group mt-2">
-                                                            <input type="tel" minlength="11" maxlength="11"
-                                                                class="form-style" placeholder="Numero" name="telefone"
-                                                                id="telefone" pattern="[0-9]+$" required />
-                                                            <i class="input-icon ph ph-phone"></i>
-                                                        </div>
-
-
-                                                        <div class="form-group mt-2">
-                                                            <select class="form-style" name="ondeEncontrar">
-                                                                <option> Secretaria </option>
-                                                                <option> Com a Minha pessoa </option>
-                                                            </select>
-                                                            <i class="input-icon ph ph-bank"></i>
-                                                        </div>
+                                                    <div class="form-group mt-2">
+                                                        <select class="form-style" name="ondeEncontrar">
+                                                            <option> Secretaria </option>
+                                                            <option> Membro Docente </option>
+                                                        </select>
+                                                        <i class="input-icon ph ph-bank"></i>
+                                                    </div>
 
 
-                                                        <div class="form-group mt-2">
-                                                            <input class="form-style" type="text"
-                                                                placeholder="Descrição" name="descricao" required />
-                                                            <i class=" input-icon ph ph-info"></i>
-                                                        </div>
+                                                    <div class="form-group mt-2">
+                                                        <input class="form-style" type="text" placeholder="Descrição"
+                                                            name="descricao" required />
+                                                        <i class="input-icon ph ph-info"></i>
+                                                    </div>
+
+                                                    <div class="form-group mt-2">
+                                                        <input class="form-style" type="file" placeholder="Selecione a imagem"
+                                                            name="imagem" />
+                                                    </div>
 
 
-                                                        <a href="javascript:history.back()" class="btn mt-4">Voltar</a>
-
-                                                        <input class="btn mt-4" type="submit" value="Enviar">
-
+                                                    <input class="btn mt-4" type="submit" value="Enviar">
+                                                    <a href="javascript:history.back()" class="btn mt-4">Voltar</a>
 
 
-                                                    </form>
-
-
-                                                    <script src="../constantes.js"></script>
-                                                    <script src="../produtos/cadastroItensAchados.js"></script>
-
-                                                </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -98,7 +94,13 @@
                     </div>
                 </div>
             </div>
-        </div>    
-    </body>
+        </div>
+    </div>
+
+    <script src="../constantes.js"></script>
+    <script src="../usuarios/senha.js"></script>
+    <script src="../produtos/cadastroProdutos.js"></script>
+
+</body>
 
 </html>

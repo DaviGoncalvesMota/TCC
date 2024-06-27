@@ -16,15 +16,16 @@
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    margin-top: 1rem;
+   
     padding: 4rem;
-    gap: 112px;
+
 }
 
 body {
     background-color: #141B3E;
     background-size: cover;
 }
+
 
 
 header {
@@ -84,7 +85,48 @@ header nav ul li a.active {
     background: #ffffff;
 }
 
+
+
+
+
 /* fundo */
+
+.fund3 {
+
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4rem;
+ 
+
+}
+
+
+.text-content1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: 'poppins', sans-serif;
+    color: rgb(255, 255, 255);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.sub1 {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.title1 {
+    text-align: center;
+    color: #A3C2FF;
+}
+
 
 .text-content {
     display: flex;
@@ -92,11 +134,10 @@ header nav ul li a.active {
     gap: 2rem;
     font-family: 'poppins', sans-serif;
     color: rgb(255, 255, 255);
-    padding: 1rem;
-    max-width: 50rem;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    align-content: center;
 }
 
 .title {
@@ -139,8 +180,7 @@ header nav ul li a.active {
 }
 
 .sub {
-    display: flex;
-
+    text-align: center;
     font-size: 1.2rem;
 }
 
@@ -246,7 +286,7 @@ header nav ul li a.active {
 
 
     header .logo {
-        font-size: 1.1rem;
+       width: 10rem;
     }
 }
 
@@ -254,17 +294,9 @@ header nav ul li a.active {
 
 
 
-@media (max-width: 934px) {
-
-    .lg {
-        width: 20rem;
-    }
 
 
-}
-
-
-@media (max-width: 768px) {
+@media (max-width: 995px) {
     .section {
         padding: 1rem;
 
@@ -313,17 +345,13 @@ header nav ul li a.active {
 
     }
 
-    .lg {
-        width: 15rem;
-    }
-
+   
 
 }
 
 @media (max-width: 376px) {
     .section {
         padding: 1rem;
-
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
@@ -339,27 +367,7 @@ header nav ul li a.active {
 
     }
 
-    .lg {
-        width: 15rem;
-    }
-
+  
 
 }
 
-@media (max-width: 540px) {
-
-
-    .lg {
-        width: 20rem;
-    }
-
-}
-
-@media (max-width: 370px) {
-
-
-    .lg {
-        width: 15rem;
-    }
-
-}

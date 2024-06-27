@@ -8,8 +8,8 @@ const produtoSchema = new mongoose.Schema({
     ondeEncontrar: {type: String, required: true},
     descricao: {type: String, required: false}, 
     userName: {type: String, required: false},
-    userId: {type: String, required: false}
-    
+    userId: {type: String, required: false},
+    imagem: {data: Buffer, ContentType: String },
 })
 
 module.exports = restful.model('Produto', produtoSchema)

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../cssGeral/inf.css">
+    <link rel="stylesheet" href="../cssGeral/contatohome.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="../imagens/icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+    <title> Informações </title>
+</head>
+
+<body>
+
+    <header>
+        <a href="#"><img class="logo" src="../imagens/logo.png" alt=""></a>
+
+
+        <input type="checkbox" id="nav_check" hidden>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="paginaPrincipal.html" >Home</a>
+                </li>
+                <li>
+                    <a href="#" class="active">Informações</a>
+                </li>
+
+                <li>
+                    <a href="paginaAchados.html"> Achados </a>
+                </li>
+                <li>
+                    <a href="paginaPerdidos.html">Perdidos</a>
+                </li>
+                <li>
+                    <a href="#">Contatos</a>
+                </li>
+                <li>
+                    <a onclick="perfil();" id="nome"> </a>
+                </li>
+                <li>
+                    <div id="deslogar"></div>
+                </li>
+            </ul>
+        </nav>
+
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <!-- corpo -->
+
+
+
+
+
+    <div class="section">
+        <div class="cont2">
+
+
+            <div class="fund2">
+                <div class="text-content">
+                    <h1 class="title">Achados e Perdidos </h1>
+                    <p class="sub">O Projeto "Achados e Perdidos" nas Etecs estabelece um sistema centralizado para
+                        registrar e
+                        recuperar itens perdidos por estudantes e funcionários.<br><br>
+                        A iniciativa visa resolver o problema
+                        recorrente de perdas, com milhares de itens reportados perdidos em locais como ônibus, correios,
+                        escolas
+                        e aeroportos anualmente.<br><br>
+                        O projeto permite que funcionários das secretarias e membros adicionem
+                        informações detalhadas sobre itens achados e perdidos em um banco de dados online acessível a
+                        todos os usuários, facilitando a localização e devolução dos objetos perdidos.
+                        <br><br>
+
+                        Atualmente, o projeto está sendo desenvolvido na Etec de Mauá, mas ao longo do tempo planejamos
+                        expandi-lo para incluir mais escolas e estabelecimentos.
+
+
+
+
+
+
+
+
+
+
+                    </p>
+                </div>
+                <br>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class="fund3">
+            <div class="text-content1">
+                <h1 class="title"> Criadores </h1>
+                <p class="sub1">A empresa é formada por 4 alunos da Etec de Maúa Sendo esses:<br><br>
+                    Edgar e Henrique – Responsáveis pela documentação do projeto, planejamento de baterias de testes,
+                    textos explicativos do projeto (como este que você está lendo agora) e quaisquer tarefas que não
+                    envolvam programação.<br><br>
+                    Homero - Responsável pelo desenvolvimento frontend do site, ou seja, responsável pela estilização e
+                    visualização do site para o usuário, ele utiliza de linguagens como HTML e CSS para o ajudar nesse
+                    campo. <br> <br>
+                    Davi - Responsável pelo desenvolvimento fullstack do site, pelas interações do usuário com o site e
+                    pelo funcionamento do sistema em geral, tanto do lado cliente, tanto do servidor, ele utiliza apenas
+                    a linguagem JavaScript para realizar seu trabalho.
+
+
+
+                </p>
+            </div>
+            <br>
+
+
+        </div>
+
+    </div>
+
+
+    
+        <footer id="cont">
+            <div class="conta">
+    
+                <div class="contato-container">
+    
+                    <h1>Entre em contato conosco</h1>
+    
+                    <div class="links-btn">
+                        <a href="https://contate.me/bresta" 
+                            target="_blank">
+                            <i class="bx bxl-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/_bresta?igsh=MWZobHdsajBpMG1saQ==" target="_blank">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="mailto:brestatcc@gmail.com" target="_blank">
+                            <i class='bx bxl-gmail'></i>
+                        </a>
+    
+                    </div>
+                </div>
+        </footer>
+ 
+
+
+    <script src="../constantes.js"></script>
+    <script src="../usuarios/apiUsuarios.js"></script>
+    <script src="../usuarios/mostrarPerfil.js"></script>
+
+
+</body>
+
+</html>

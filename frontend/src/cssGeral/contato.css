@@ -1,13 +1,13 @@
 footer {
-  background: rgb(0 0 0 / 77%);
-  color: #ffffff;
-  padding: 29px 2px;
-  font-family: 'Montserrat', monospace;
-  font-weight: bold;
-  margin-top: 16vh;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000; /* Cor de fundo do footer */
+    color: white; /* Cor do texto do footer */
+    text-align: center; /* Alinhamento do texto */
+    padding: 10px 0; /* Espaçamento interno */
+    z-index: -1;
 }
 
 .regu {

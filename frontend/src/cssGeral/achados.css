@@ -4,6 +4,15 @@ body
 {
     background-color: #141B3E;
     background-size: cover;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Define uma grade com três linhas */
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    margin: 0;
+}
+
+main {
+    /* O conteúdo principal ocupa a segunda linha da grade */
+    grid-row: 2 / 3;
 }
 
 
