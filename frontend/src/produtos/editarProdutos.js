@@ -15,11 +15,11 @@ form.addEventListener('submit', evento => {
         },
         body: JSON.stringify(data)
     }).then(res => res.json()).then(data => {
-      if(data.ondeEncontrar === "Secretaria"){
-        window.location.href = '../paginas/paginaAchados.html'   
+      if(data.categoria === "Achados"){
+        window.location.href = '../paginas/paginaAchados.html';   
       }  
       else {
-        window.location.href = '../paginas/paginaPerdidos.html'
+        window.location.href = '../paginas/paginaPerdidos.html';
       }
     })    
 })
@@ -39,8 +39,7 @@ window.addEventListener('load', evento => {
         document.getElementById('_id').value = data._id;
         document.getElementById('nome').value = data.nome;
         document.getElementById('local').value = data.local;
-        document.getElementById('telefone').value = data.telefone;
-        document.getElementById('ondeEncontrar').value = data.ondeEncontrar;
+        document.getElementById('categoria').value = data.categoria;
         document.getElementById('descricao').value = data.descricao;
     } )    
    

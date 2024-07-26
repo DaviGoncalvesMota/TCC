@@ -26,16 +26,16 @@ form.addEventListener('submit', evento => {
     })
 },
 
-window.addEventListener('load', evento => {
-    const id = localStorage.getItem('id');
-    fetch(`${baseURL}/api/users/${id}`, {
-        method: 'GET',
-        headers: {
-            'content-type': 'application/json'
-        }
-    }).then(res => res.json()).then(data => {
-        document.getElementById('nome').value = data.nome;
-        document.getElementById('email').value = data.email;
-        document.getElementById('senha').value = data.senha;
-    })
-}))
+    window.addEventListener('load', () => {
+        const id = localStorage.getItem('id');
+        fetch(`${baseURL}/api/users/${id}`, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json'
+            }
+        }).then(res => res.json()).then(data => {
+            document.getElementById('nome').value = data.nome;
+            document.getElementById('email').value = data.email;
+            document.getElementById('senhaEditar').value = data.senha;
+        })
+    }))

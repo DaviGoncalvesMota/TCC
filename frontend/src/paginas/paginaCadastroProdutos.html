@@ -30,12 +30,6 @@
 
 
                                                 <form id="form-api">
-
-
-                                                    <input type="hidden" id="userId" name="userId" />
-                                                    <input type="hidden" id="userName" name="userName" />
-
-
                                                     <div class="form-group mt-2">
                                                         <input type="text" class="form-style"
                                                             placeholder="Nome do produto" name="nome"
@@ -52,17 +46,9 @@
                                                     </div>
 
                                                     <div class="form-group mt-2">
-                                                        <input type="tel" minlength="11" maxlength="11"
-                                                            class="form-style" placeholder="Numero" name="telefone"
-                                                            id="telefone" pattern="[0-9]+$" required />
-                                                        <i class="input-icon ph ph-phone"></i>
-                                                    </div>
-
-
-                                                    <div class="form-group mt-2">
-                                                        <select class="form-style" name="ondeEncontrar">
-                                                            <option> Secretaria </option>
-                                                            <option> Membro Docente </option>
+                                                        <select class="form-style" name="categoria">
+                                                            <option> Achados </option>
+                                                            <option> Perdidos </option>
                                                         </select>
                                                         <i class="input-icon ph ph-bank"></i>
                                                     </div>
@@ -76,7 +62,7 @@
 
                                                     <div class="form-group mt-2">
                                                         <input class="form-style" type="file" placeholder="Selecione a imagem"
-                                                            name="imagem" />
+                                                            name="img" id="img" />
                                                     </div>
 
 
@@ -98,7 +84,6 @@
     </div>
 
     <script src="../constantes.js"></script>
-    <script src="../usuarios/senha.js"></script>
     <script src="../produtos/cadastroProdutos.js"></script>
 
 </body>

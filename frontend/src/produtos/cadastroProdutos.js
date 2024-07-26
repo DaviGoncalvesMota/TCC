@@ -1,18 +1,21 @@
 const form = document.getElementById('form-api');
 
-form.addEventListener('submit', evento => {
-    evento.preventDefault();
+const toBase64 = file => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+}); 
 
-    let userName = localStorage.getItem('nome');
-    let userId = localStorage.getItem('id');
+async function salvar(data, file) {
+    var imgBase64 = await toBase64(file);
 
-    document.getElementById('userName').value = userName;
-    document.getElementById('userId').value = userId;
-
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-
-    console.log(data);
+    data = {...data, 
+        imagem: {
+            data: imgBase64,
+            contentType: file.type
+        }
+    }
 
     fetch(`${baseURL}/api/produtos`, {
         method: 'POST',
@@ -21,13 +24,24 @@ form.addEventListener('submit', evento => {
         },
         body: JSON.stringify(data)
     }).then(res => res.json()).then(data => {
-        console.log(data);
-        return;
-        if(data.ondeEncontrar === "Secretaria"){
+        if(data.categoria === "Achados"){
             window.location.href = '../paginas/paginaAchados.html';
         }
         else {
             window.location.href = '../paginas/paginaPerdidos.html';
         }
-    })
+    })    
+ }
+ 
+
+form.addEventListener('submit', evento => {
+    evento.preventDefault();
+
+    const formData = new FormData(form);
+    let data = Object.fromEntries(formData);
+
+    var img = document.getElementById('img');
+    var file = img.files[0];
+
+    salvar(data, file);
 })

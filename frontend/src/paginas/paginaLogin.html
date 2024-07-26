@@ -38,9 +38,10 @@
 												<br>
 											</div>
 											<div class="form-group mt-2">
-												<input type="password" class="form-style" id="senha" name="senha"
+												<input type="password" class="form-style" id="senhaLogin" name="senha"
 													placeholder="digite sua senha..."  required />
 												<i class="input-icon uil uil-lock-alt"></i>
+												<i onclick="verSenhaLogin();" style="left: 20rem;" class="input-icon uil-eye"></i>
 												<br>
 											</div>
 
@@ -78,10 +79,9 @@
 												</div>
 												<div class="form-group mt-2">
 													<input type="password" class="form-style"
-														placeholder="digite sua Senha..." name="senha" id="inputSenha" required/>
+														placeholder="digite sua Senha..." name="senha" id="senhaCadastro" required/>
 													<i class="input-icon uil uil-lock-alt"></i>
-													<i style="margin-left: 50vh;" class="input-icon uil-eye" id="btnSenha"></i>
-
+													<i onclick="verSenhaCadastro();" style="left: 20rem;" class="input-icon uil-eye"></i>
 												</div>
 												<br>
 												<input type="submit" class="btn mt-4" value="enviar" />
@@ -102,8 +102,8 @@
 			<script src="../usuarios/senha.js"></script>
 			<script src="../usuarios/login.js"></script>
 			<script src="../usuarios/CadastroUsuarios.js"></script>
-
 </body>
+</html>
 
 
 

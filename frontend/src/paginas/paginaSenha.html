@@ -35,15 +35,17 @@
 
                                                 <div class="form-group mt-2">
                                                     <input type="password" class="form-style"
-                                                        placeholder="digite uma nova senha..." id="senha"
+                                                        placeholder="digite uma nova senha..." id="senhaNova"
                                                         name="senha" />
                                                     <i class="input-icon uil uil-lock-alt"></i>
+                                                    <i onclick="verSenhaNova();" style="left: 20rem;" class="input-icon uil-eye"></i>
                                                 </div>
 
                                                 <div class="form-group mt-2">
                                                     <input type="password" class="form-style"
                                                         placeholder="confirme a senha..." id="senhaConfirma" />
                                                     <i class="input-icon uil uil-lock-alt"></i>
+                                                    <i onclick="verSenhaConfirma();" style="left: 20rem;" class="input-icon uil-eye"></i>
                                                 </div>
 
                                                 <button class="btn mt-4" onclick="alterarSenha()"> Enviar </button>
@@ -59,17 +61,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <label> Digite seu email </label> -->
-    <!-- <input type="email" id="email" name="email" placeholder="digite seu email..." /> -->
-    <!-- <Br> -->
-    <!-- <label> Digite uma nova senha</label> -->
-    <!-- <input type="password" id="senha" name="senha" placeholder="digite sua nova senha..." /> -->
-    <!-- <br> -->
-    <!-- <label> confirme sua nova senha</label> -->
-    <!-- <input type="password" id="senhaConfirma" placeholder="confirme sua senha..." /> -->
-
-    <!-- <button onclick="alterarSenha()">Enviar </button> -->
 
     <script src="../constantes.js"></script>
     <script src="../usuarios/senha.js"></script>

@@ -4,8 +4,8 @@ const express = require('express')
 const server = express()
 const allowCors = require('./cors')
 
-server.use(express.urlencoded({ extended: true }))
-server.use(express.json())
+server.use(express.urlencoded({ extended: true, limit: '50mb' }))
+server.use(express.json({ limit: '50mb' }))
 server.use(allowCors)
 
 server.listen(port, function () {

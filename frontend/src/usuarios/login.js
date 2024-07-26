@@ -1,6 +1,6 @@
 function logar() {
     const email = document.getElementById('emailLogin').value;
-    const senha = document.getElementById('senha').value;
+    const senha = document.getElementById('senhaLogin').value;
 
     if (email > "" && senha > "") {
         fetch(`${baseURL}/api/users/?email=${email}`, {
@@ -16,8 +16,7 @@ function logar() {
             var usuario = data[0];
             if (usuario.senha == senha) {
                 localStorage.setItem('nome', usuario.nome);
-                localStorage.setItem('id', usuario._id)
-
+                localStorage.setItem('id', usuario._id);
                 window.location.href = "../paginas/paginaPrincipal.html"
             } else {
                 alert("Usuário ou senha inválido.");

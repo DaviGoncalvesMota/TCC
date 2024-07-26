@@ -7,6 +7,7 @@ async function getBuscarAchados() {
     exibirAchadosNaTela(achados);
 }
 
+
 getBuscarPerdidos()
 async function getBuscarPerdidos() {
     const prod = await fetch(endpointDaApiProdutos)
