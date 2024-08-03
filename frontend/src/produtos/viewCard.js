@@ -1,14 +1,14 @@
-const id = document.getElementById('id').value;
-const nome = document.getElementById('nome');
+const idCard = document.getElementById('idCard').value;
+const nome = document.getElementById('nomeix');
 const local = document.getElementById('local');
 const descricao = document.getElementById('descricao');
 
 window.addEventListener('load', evento => {
     
     const queryString = window.location.search;
-    const id = queryString.replace("?id=", "");
+    const idCard = queryString.replace("?id=", "");
 
-    fetch(`${baseURL}/api/produtos/${id}`, {
+    fetch(`${baseURL}/api/produtos/${idCard}`, {
         method: 'GET',
         headers: {
             'content-type' : 'application/json'

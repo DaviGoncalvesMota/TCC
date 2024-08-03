@@ -1,20 +1,33 @@
-const form = document.getElementById('form-api');
+const formAchados = document.getElementById('formAchados');
+const formPerdidos = document.getElementById('formPerdidos');
 
-const toBase64 = file => new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = reject;
-}); 
+function selecionar() {
 
-async function salvar(data, file) {
-    var imgBase64 = await toBase64(file);
+    const categoriaSelecao = document.getElementById('categoria').value;
 
-    data = {...data, 
-        imagem: {
-            data: imgBase64,
-            contentType: file.type
-        }
+    if (categoriaSelecao === 'Achados') {
+        formAchados.style.display = 'block';
+        formPerdidos.style.display = 'none';
+    } else if (categoriaSelecao === 'Perdidos') {
+        formPerdidos.style.display = 'block';
+        formAchados.style.display = 'none';
+    } else {
+        formAchados.style.display = 'none';
+        formPerdidos.style.display = 'none';
+    }
+}
+
+
+formAchados.addEventListener('submit', evento => {
+    evento.preventDefault();
+    const categoriaSelecao = document.getElementById('categoria').value;
+
+    const formData = new FormData(formAchados);
+    let data = Object.fromEntries(formData);
+
+    data = {
+        ...data,
+        categoria: categoriaSelecao
     }
 
     fetch(`${baseURL}/api/produtos`, {
@@ -24,24 +37,29 @@ async function salvar(data, file) {
         },
         body: JSON.stringify(data)
     }).then(res => res.json()).then(data => {
-        if(data.categoria === "Achados"){
-            window.location.href = '../paginas/paginaAchados.html';
-        }
-        else {
-            window.location.href = '../paginas/paginaPerdidos.html';
-        }
-    })    
- }
- 
+        window.location.href = '../paginas/paginaAchados.html';
+    })
+})
 
-form.addEventListener('submit', evento => {
+formPerdidos.addEventListener('submit', evento => {
     evento.preventDefault();
+    const categoriaSelecao = document.getElementById('categoria').value;
 
-    const formData = new FormData(form);
+    const formData = new FormData(formPerdidos);
     let data = Object.fromEntries(formData);
 
-    var img = document.getElementById('img');
-    var file = img.files[0];
+    data = {
+        ...data,
+        categoria: categoriaSelecao
+    }
 
-    salvar(data, file);
+    fetch(`${baseURL}/api/produtos`, {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }).then(res => res.json()).then(data => {
+        window.location.href = '../paginas/paginaPerdidos.html';
+    })
 })

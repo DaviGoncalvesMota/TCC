@@ -26,32 +26,29 @@
 									<div class="center-wrap">
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">Login</h4>
+											<!-- Logar  -->
 
+											<form id="formLogin">
+												<div class="form-group">
+													<input type="email" class="form-style" id="emailLogin" name="email"
+														placeholder="digite seu email..." required />
+													<i class="input-icon uil uil-at"></i>
+												</div>
+												<div class="form-group mt-2">
+													<input type="password" class="form-style" id="senhaLogin"
+														name="senha" placeholder="digite sua senha..." required />
+													<i class="input-icon uil uil-lock-alt"></i>
+													<i onclick="verSenhaLogin();" style="left: 20rem;"
+														class="input-icon uil-eye"></i>
+													<br>
+												</div>
 
-											<div class="form-group">
-
-												<!-- Logar  -->
-
-												<input type="email" class="form-style" id="emailLogin" name="email"
-													placeholder="digite seu email..." required />
-												<i class="input-icon uil uil-at"></i>
-												<br>
-											</div>
-											<div class="form-group mt-2">
-												<input type="password" class="form-style" id="senhaLogin" name="senha"
-													placeholder="digite sua senha..."  required />
-												<i class="input-icon uil uil-lock-alt"></i>
-												<i onclick="verSenhaLogin();" style="left: 20rem;" class="input-icon uil-eye"></i>
-												<br>
-											</div>
-
-											<button class="btn mt-4" onclick="logar();"> Enviar </button>
-											<a href="javascript:history.back()">
-												<button class="btn mt-4"> Voltar </button>
-											</a>
-											<a href="../paginas/paginaSenha.html">
-												<button class="btn mt-4"> Esqueci minha senha </button>
-											</a>
+												<input type="submit" class="btn mt-4" value="enviar" />
+												<a class="btn mt-4" href="javascript:history.back()"> Voltar </a>
+												<a href="../paginas/paginaSenha.html">
+													<button class="btn mt-4"> Esqueci minha senha </button>
+												</a>
+											</form>
 										</div>
 									</div>
 								</div>
@@ -65,23 +62,26 @@
 									<div class="center-wrap">
 										<div class="section text-center mt-3">
 											<h4 class="mb-1 pb-3">Cadastre-se</h4>
-											<form id="form">
+											<form id="formCadastro">
 												<div class="form-group">
-													<input type="text" placeholder="digite seu nome..." name="nome" id="nome"
-														class="form-style" required/>
+													<input type="text" placeholder="digite seu nome..." name="nome"
+														id="nome" class="form-style" required />
 													<i class="input-icon uil uil-user"></i>
 												</div>
 
 												<div class="form-group mt-2">
 													<input type="email" class="form-style"
-														placeholder="digite seu email..." name="email" id="emailCadastro" required/>
+														placeholder="digite seu email..." name="email"
+														id="emailCadastro" required />
 													<i class="input-icon uil uil-at"></i>
 												</div>
 												<div class="form-group mt-2">
 													<input type="password" class="form-style"
-														placeholder="digite sua Senha..." name="senha" id="senhaCadastro" required/>
+														placeholder="digite sua Senha..." name="senha"
+														id="senhaCadastro" required />
 													<i class="input-icon uil uil-lock-alt"></i>
-													<i onclick="verSenhaCadastro();" style="left: 20rem;" class="input-icon uil-eye"></i>
+													<i onclick="verSenhaCadastro();" style="left: 20rem;"
+														class="input-icon uil-eye"></i>
 												</div>
 												<br>
 												<input type="submit" class="btn mt-4" value="enviar" />
@@ -103,6 +103,7 @@
 			<script src="../usuarios/login.js"></script>
 			<script src="../usuarios/CadastroUsuarios.js"></script>
 </body>
+
 </html>
 
 

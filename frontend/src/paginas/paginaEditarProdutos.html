@@ -31,28 +31,21 @@
                                                     <input type="hidden" id="_id" />
                                                     <div class="form-group mt-2">
                                                         <input type="text" class="form-style"
-                                                            placeholder="digite o nome do produto..." id="nome" name="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />
+                                                            placeholder="digite o nome do produto..." id="nome" name="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
+                                                            required />
                                                         <i class="input-icon ph ph-bag"></i>
                                                     </div>
 
 
                                                     <div class="form-group mt-2 ">
                                                         <input type="text" class="form-style"
-                                                            placeholder="digite o local..." id="local" name="local" />
+                                                            placeholder="digite o local..." id="local" name="local" required />
                                                         <i class="input-icon ph ph-map-pin"></i>
                                                     </div>
 
                                                     <div class="form-group mt-2">
-                                                        <select class="form-style" name="categoria" id="categoria">
-                                                            <option> Achados </option>
-                                                            <option> Perdidos </option>
-                                                        </select>
-                                                        <i class="input-icon ph ph-bank"></i>
-                                                    </div>
-
-                                                    <div class="form-group mt-2">
                                                         <input type="text" class="form-style"
-                                                            placeholder="descreva o produto..." id="descricao" name="descricao" />
+                                                            placeholder="descreva o produto..." id="descricao" name="descricao" required />
                                                         <i class="input-icon ph ph-info"></i>
                                                     </div>
                                                     
@@ -70,37 +63,6 @@
             </div>
         </div>
     </div>
-
-
-    <!-- <form id="form-api"> -->
-        <!--  -->
-        <!-- <label> Nome: </label> -->
-        <!-- <br> -->
-        <!-- <input type="text" placeholder="digite o produto" name="nome" id="nome" /> -->
-        <!-- <br> -->
-        <!-- <label> local: </label> -->
-        <!-- <br> -->
-        <!-- <input type="text" placeholder="digite onde foi achado" name="local" id="local" /> -->
-        <!-- <br> -->
-        <!-- <label> Seu Numero de Contato </label> -->
-        <!-- <br> -->
-        <!-- <input type="tel" placeholder="Numero" name="telefone" id="telefone" /> -->
-        <!-- <br> -->
-        <!-- <label> Aonde o item se encontra </label> -->
-        <!-- <br> -->
-        <!-- <select name="ondeEncontrar" id="ondeEncontrar"> -->
-            <!-- <option> Secretaria </option> -->
-            <!-- <option> Com a Minha pessoa </option> -->
-        <!-- </select> -->
-        <!-- <br> -->
-        <!-- <label> Descrição item </label> -->
-        <!-- <br> -->
-        <!-- <input type="text" placeholder="Descrição" name="descricao" id="descricao" /> -->
-        <!-- <br> -->
-        <!-- <br> -->
-<!--  -->
-        <!-- <input type="submit" value="enviar"> -->
-    <!-- </form> -->
 
     <script src="../constantes.js"></script>
     <script src="../usuarios/senha.js"></script>

@@ -1,20 +1,99 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Card </title>
+    <link rel="stylesheet" href="../cssGeral/cards.css">
+    <link rel="stylesheet" href="../cssGeral/style.css">
+    <link rel="stylesheet" href="../cssGeral/add.css">
+    <link rel="stylesheet" href="../cssGeral/contato.css">
+    <link rel="icon" href="../imagens/icon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+
+    <title>Pagina Achados</title>
+
 </head>
+
 <body>
-    
-    <input type="hidden" id="id" name="id"/>
-    <p id="nome" name="nome"> </p>
-    <p id="local" name="local"></p>
-    <p id="descricao" name="descricao"></p>
 
-    
+    <header>
+        <a href="#"><img class="logo" src="../imagens/logo.png" alt=""></a>
 
-<script src="../constantes.js"></script>
-<script src="../produtos/viewCard.js"></script>    
+
+        <input type="checkbox" id="nav_check" hidden>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="paginaPrincipal.html">Home</a>
+                </li>
+                <li>
+                    <a href="paginaInformacoes.html">Informações</a>
+                </li>
+
+                <li>
+                    <a href="#" class="active"> Achados </a>
+                </li>
+                <li>
+                    <a href="paginaPerdidos.html">Perdidos</a>
+                </li>
+                <li>
+                    <a href="#">Contatos</a>
+                </li>
+                <li>
+                    <a onclick="perfil();" id="nome"> </a>
+                </li>
+                <li>
+                    <div id="deslogar"></div>
+                </li>
+            </ul>
+        </nav>
+
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+
+
+
+
+
+
+
+    <section class="secao4">
+        <div class="centro">
+            <div class="secao4-div">
+                <div class="secao4-div-card">
+
+                    <input type="hidden" id="idCard" name="id" />
+                    
+                    <h3 id="nomeix" name="nome"> </h3>
+
+                    <p id="local" name="local"></p>
+                    
+                    <p id="descricao" name="descricao"></p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="../constantes.js"></script>
+    <script src="../produtos/viewCard.js"></script>
+
+
 </body>
+
 </html>

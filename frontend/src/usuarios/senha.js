@@ -1,6 +1,6 @@
 function alterarSenha() {
     const email = document.getElementById('email').value;
-    const senha = document.getElementById('senha').value;
+    const senha = document.getElementById('senhaNova').value;
     const senhaConfirma = document.getElementById('senhaConfirma').value;
 
     fetch(`${baseURL}/api/users/?email=${email}`, {
@@ -76,22 +76,3 @@ function verSenhaConfirma(){
         senhaConfirma.setAttribute('type', 'password')
     }
 }
-
-
-
-
-
-
-
-
-
-// let btnSenha = document.querySelector('#btnSenha')
-//   btnSenha.addEventListener('click', function () {
-// let inputSenha = document.querySelector('#inputSenha')
-// if (inputSenha.getAttribute('type') == 'password') {
-//   inputSenha.setAttribute('type', 'text')
-// } else {
-//   inputSenha.setAttribute('type', 'password')
-// }
-//   })
-

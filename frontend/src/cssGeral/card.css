@@ -82,10 +82,8 @@ a.btn
     justify-content: center;
     padding: 10px;
     text-align: center;
-    height: 100vh;
-    align-content: center;
+ 
 }
-
 
 
 
@@ -102,12 +100,12 @@ a.btn
     transition: all 0.5s ease;
     gap: 1rem;
     padding: 3rem;
-    border: 3px solid #beceff;
 }
 
 .secao4-div-card:hover {
     transform: scale(1.02);
     z-index: 1;
+    border: 3px solid #beceff;
 }
 
 .secao4-div-card img {

@@ -23,13 +23,19 @@
                                 <div class="card-front">
                                     <div class="center-wrap">
                                         <div class="section text-center">
-                                            <h4 class="mb-4 pb-3"> Adicionar item achado </h4>
+                                            <h4 class="mb-4 pb-3"> Adicionar item</h4>
                                             <div class="form-group">
 
+                                                <div class="form-group mt-2">
+                                                    <select class="form-style" name="categoria" onchange="selecionar()" id="categoria">
+                                                        <option> Achados </option>
+                                                        <option> Perdidos </option>
+                                                    </select>
+                                                    <i class="input-icon ph ph-bank"></i>
+                                                </div>
 
 
-
-                                                <form id="form-api">
+                                                <form id="formAchados">
                                                     <div class="form-group mt-2">
                                                         <input type="text" class="form-style"
                                                             placeholder="Nome do produto" name="nome"
@@ -46,25 +52,71 @@
                                                     </div>
 
                                                     <div class="form-group mt-2">
-                                                        <select class="form-style" name="categoria">
-                                                            <option> Achados </option>
-                                                            <option> Perdidos </option>
-                                                        </select>
-                                                        <i class="input-icon ph ph-bank"></i>
+                                                        <input class="form-style" type="text" placeholder="Descrição"
+                                                            name="descricao" required />
+                                                        <i class="input-icon ph ph-info"></i>
                                                     </div>
 
+
+
+
+
+
+                                                    
+
+
+                                                    	
+												<div class="form-group mt-2">
+
+													 <i class="input-icon ph ph-image"></i>
+
+													<label for='selecao-arquivo' class="form-style">Escolha sua foto</label>
+
+													<input type="file" name="img" id="selecao-arquivo" placeholder="Sua Foto">
+
+												</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    <input class="btn mt-4" type="submit" value="Enviar">
+                                                    <a href="javascript:history.back()" class="btn mt-4">Voltar</a>
+
+
+                                                </form>
+
+                                                <form id="formPerdidos" style="display: none;">
+                
+                                                    <div class="form-group mt-2">
+                                                        <input type="text" class="form-style"
+                                                            placeholder="Nome do produto" name="nome"
+                                                            pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
+                                                            required />
+                                                        <i class="input-icon ph ph-bag"></i>
+                                                    </div>
+
+
+                                                    <div class="form-group mt-2">
+                                                        <input type="text" class="form-style" placeholder="local"
+                                                            name="local" required />
+                                                        <i class="input-icon ph ph-map-pin"></i>
+                                                    </div>
 
                                                     <div class="form-group mt-2">
                                                         <input class="form-style" type="text" placeholder="Descrição"
                                                             name="descricao" required />
                                                         <i class="input-icon ph ph-info"></i>
                                                     </div>
-
-                                                    <div class="form-group mt-2">
-                                                        <input class="form-style" type="file" placeholder="Selecione a imagem"
-                                                            name="img" id="img" />
-                                                    </div>
-
 
                                                     <input class="btn mt-4" type="submit" value="Enviar">
                                                     <a href="javascript:history.back()" class="btn mt-4">Voltar</a>

@@ -39,7 +39,6 @@ window.addEventListener('load', evento => {
         document.getElementById('_id').value = data._id;
         document.getElementById('nome').value = data.nome;
         document.getElementById('local').value = data.local;
-        document.getElementById('categoria').value = data.categoria;
         document.getElementById('descricao').value = data.descricao;
     } )    
    
