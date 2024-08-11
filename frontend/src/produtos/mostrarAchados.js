@@ -56,6 +56,7 @@ function exibirAchadosNaTela(listaDeProdutos) {
             <div class="centro">
                 <div class="secao4-div">
                     <div class="secao4-div-card">
+                        <img src="${produto.imagem}" />
                         <h3> ${produto.nome} </h3> 
                         <p> ${produto.local} </p>
                         ${alterar || card || vazio}

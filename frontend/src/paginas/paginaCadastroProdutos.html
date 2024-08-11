@@ -34,8 +34,7 @@
                                                     <i class="input-icon ph ph-bank"></i>
                                                 </div>
 
-
-                                                <form id="formAchados">
+                                                <form id="formAchados" enctype="multipart/form-data">
                                                     <div class="form-group mt-2">
                                                         <input type="text" class="form-style"
                                                             placeholder="Nome do produto" name="nome"
@@ -43,7 +42,6 @@
                                                             required />
                                                         <i class="input-icon ph ph-bag"></i>
                                                     </div>
-
 
                                                     <div class="form-group mt-2">
                                                         <input type="text" class="form-style" placeholder="local"
@@ -57,41 +55,15 @@
                                                         <i class="input-icon ph ph-info"></i>
                                                     </div>
 
-
-
-
-
-
-                                                    
-
-
-                                                    	
-												<div class="form-group mt-2">
-
-													 <i class="input-icon ph ph-image"></i>
-
-													<label for='selecao-arquivo' class="form-style">Escolha sua foto</label>
-
-													<input type="file" name="img" id="selecao-arquivo" placeholder="Sua Foto">
-
-												</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                                    <div class="form-group mt-2">
+                                                        <i class="input-icon ph ph-image"></i>
+                                                        <label for='selecao-arquivo' class="form-style">Escolha sua foto</label>
+                                                        <input type="file" id="selecao-arquivo" placeholder="Sua Foto">
+                                                        <input type="hidden" id="imagem" name="imagem" />
+                                                    </div>
 
                                                     <input class="btn mt-4" type="submit" value="Enviar">
                                                     <a href="javascript:history.back()" class="btn mt-4">Voltar</a>
-
 
                                                 </form>
 
