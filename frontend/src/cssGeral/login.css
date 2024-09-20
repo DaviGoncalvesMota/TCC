@@ -4,14 +4,15 @@ body{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	line-height: 1.7;
-	color: #A3C2FF;
-	background-color: #141B3E;
+	color: #ffffff;
+	background: rgb(20,27,62);
+background: linear-gradient(0deg, rgba(20,27,62,1) 0%, rgba(74,85,143,1) 35%, rgba(146,201,255,1) 100%);
 }
 a:hover {
 	text-decoration: none;
 }
 .link {
-  color: #A3C2FF;
+  color: #ffffff;
 }
 .link:hover {
   color: #c4c3ca;
@@ -50,7 +51,7 @@ display: none;
   padding: 0;
   margin: 10px auto;
   cursor: pointer;
-  background-color: #A3C2FF;
+  background-color: #ffffff;
 }
 .checkbox:checked + label:before,
 .checkbox:not(:checked) + label:before{
@@ -59,7 +60,7 @@ display: none;
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  color: #A3C2FF;
+  color: #ffffff;
   background-color: #020305;
   font-family: 'unicons';
   content: '\eb4f';
@@ -104,7 +105,6 @@ display: none;
   border-radius: 20px;
     border: 3px solid #ffffffd1;
 }
-
 .card-back {
   transform: rotateY(180deg);
 }
@@ -140,7 +140,8 @@ display: none;
   outline: none;
   color: #c4c3ca;
   background-color: #1f2029;
-  border: none;
+
+  border-radius: 20px;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
   box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
@@ -149,6 +150,7 @@ display: none;
 .form-style:active {
   border: none;
   outline: none;
+  border: 2px solid white;
   box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
 }
 .input-icon {
@@ -162,8 +164,12 @@ display: none;
   -webkit-transition: all 200ms linear;
    transition: all 200ms linear;
 }
+.eyes
+{
+  left: 20rem;
+}
 .btn{  
-  border-radius: 4px;
+  border-radius: 12px;
   height: 44px;
   font-size: 13px;
   font-weight: 600;
@@ -176,10 +182,11 @@ display: none;
   display: -ms-inline-flexbox;
   display: inline-flex;
   align-items: center;
-  background-color: #A3C2FF;
+  background-color: #ffffff;
   color: #000000;
 }
 .btn:hover{  
+  border: 2px solid white;
   background-color: #000000;
   color: #A3C2FF;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
@@ -191,7 +198,7 @@ display: none;
 }
 
 label {
-  background-color: #A3C2FF;
+  background-color: #ffffff;
   border-radius: 5px;
   color: #fff;
   cursor: pointer; 
@@ -204,3 +211,27 @@ img {
 }
 
 
+@media (max-width: 450px) {
+
+  .eyes
+  {
+    left: 17rem;
+  }
+
+}
+@media (max-width: 421px) {
+
+  .eyes
+  {
+    left: 14rem;
+  }
+
+}
+@media (max-width: 361px) {
+
+  .eyes
+  {
+    left: 11rem;
+  }
+
+}

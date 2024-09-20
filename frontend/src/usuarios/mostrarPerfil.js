@@ -1,28 +1,26 @@
 let nomeExibir = localStorage.getItem('nome');
-const elementoParaInserirUsuario = document.getElementById('nome');
-const elementoParaDeslogar = document.getElementById('deslogar');
-
+const submenu = document.getElementById('submenu');
 
 function exibirUsuarioNaTela() {
     if (nomeExibir == "" || nomeExibir == null || nomeExibir == undefined) {
-        elementoParaInserirUsuario.innerHTML += "ENTRAR";
+        submenu.innerHTML += `<a href="../paginas/paginaLogin.html"> ENTRAR </a>`;
     }
     else {
-        elementoParaInserirUsuario.innerHTML += `${nomeExibir}`;
+        submenu.innerHTML += `<a> ${nomeExibir} </a>`
 
-        elementoParaDeslogar.innerHTML += `
-            <a onclick="deslogar()"> Sair </a>
+        submenu.innerHTML += 
+    
         `
+        <ul class="drop-down">
+            <li onclick="deslogar()">Sair</li>
+            <li onclick="Editar()">Editar</li>
+        </ul>
+        `;
     }
 }
 
-function perfil(){
-    if(nomeExibir != null || nomeExibir != undefined){
-        window.location.href = "../paginas/paginaEditarUsuario.html";
-    }
-    else {
-        window.location.href = '../paginas/paginaLogin.html';
-    }
+function Editar() {
+    window.location.href = "../paginas/paginaEditarUsuario.html";
 }
 
 function deslogar() {

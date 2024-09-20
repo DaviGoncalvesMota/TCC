@@ -58,13 +58,15 @@
                                                     <div class="form-group mt-2">
                                                         <i class="input-icon ph ph-image"></i>
                                                         <label for='selecao-arquivo' class="form-style">Escolha sua foto</label>
-                                                        <input type="file" id="selecao-arquivo" placeholder="Sua Foto">
-                                                        <input type="hidden" id="imagem" name="imagem" />
+                                                        <input type="file" id="selecao-arquivo" placeholder="Sua Foto" /> 
+                                                        <input type="hidden" id="imagem" name="imagem"/>
                                                     </div>
 
-                                                    <input class="btn mt-4" type="submit" value="Enviar">
-                                                    <a href="javascript:history.back()" class="btn mt-4">Voltar</a>
+                                                    <div id="imgSubir">
+                                                    </div>
 
+                                                    <input class="btn mt-3" type="submit" value="Enviar" id="btnEnviarAchado">
+                                                    <a href="javascript:history.back()" class="btn mt-3">Voltar</a>
                                                 </form>
 
                                                 <form id="formPerdidos" style="display: none;">
@@ -76,7 +78,6 @@
                                                             required />
                                                         <i class="input-icon ph ph-bag"></i>
                                                     </div>
-
 
                                                     <div class="form-group mt-2">
                                                         <input type="text" class="form-style" placeholder="local"
@@ -92,7 +93,6 @@
 
                                                     <input class="btn mt-4" type="submit" value="Enviar">
                                                     <a href="javascript:history.back()" class="btn mt-4">Voltar</a>
-
 
                                                 </form>
                                             </div>
@@ -111,5 +111,4 @@
     <script src="../produtos/cadastroProdutos.js"></script>
 
 </body>
-
 </html>

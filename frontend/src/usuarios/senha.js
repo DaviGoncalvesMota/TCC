@@ -23,7 +23,7 @@ function alterarSenha() {
                     body: JSON.stringify({
                         senha: senha
                     })
-                }).then(res => res.json()).then(data => window.location.href = '../paginas/paginaLogin.html')
+                }).then(res => res.json()).then(() => window.location.href = '../paginas/paginaLogin.html')
             }
             else {
                 alert("as senhas não correspondem");
@@ -32,47 +32,11 @@ function alterarSenha() {
     })
 }
 
-function verSenhaLogin() {
-    let senhaLogin = document.getElementById('senhaLogin');
-    if (senhaLogin.getAttribute('type') == 'password') {
-        senhaLogin.setAttribute('type', 'text')
+function verSenha(id) {
+    let senha = document.getElementById(id);
+    if (senha.getAttribute('type') == 'password') {
+        senha.setAttribute('type', 'text')
     } else {
-        senhaLogin.setAttribute('type', 'password')
-    }
-}
-
-function verSenhaCadastro() {
-    let senhaCadastro = document.getElementById('senhaCadastro');
-    if (senhaCadastro.getAttribute('type') == 'password') {
-        senhaCadastro.setAttribute('type', 'text')
-    } else {
-        senhaCadastro.setAttribute('type', 'password')
-    }
-}
-
-function verSenhaEditar() {
-    let senhaEditar = document.getElementById('senhaEditar');
-    if (senhaEditar.getAttribute('type') == 'password') {
-        senhaEditar.setAttribute('type', 'text')
-    } else {
-        senhaEditar.setAttribute('type', 'password')
-    }
-}
-
-function verSenhaNova() {
-    let senhaNova = document.getElementById('senhaNova');
-    if (senhaNova.getAttribute('type') == 'password') {
-        senhaNova.setAttribute('type', 'text')
-    } else {
-        senhaNova.setAttribute('type', 'password')
-    }
-}
-
-function verSenhaConfirma(){
-    let senhaConfirma = document.getElementById('senhaConfirma');
-    if (senhaConfirma.getAttribute('type') == 'password') {
-        senhaConfirma.setAttribute('type', 'text')
-    } else {
-        senhaConfirma.setAttribute('type', 'password')
+        senha.setAttribute('type', 'password')
     }
 }

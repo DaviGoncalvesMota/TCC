@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../cssGeral/style.css">
     <link rel="stylesheet" href="../cssGeral/add.css">
     <link rel="stylesheet" href="../cssGeral/contato.css">
+    <link rel="stylesheet" href="../cssGeral/nav.css">
     <link rel="icon" href="../imagens/icon.png">
     <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,36 +20,34 @@
     <title>Pagina Achados</title>
 
 </head>
-
 <body>
 
     <header>
         <a href="paginaPrincipal.html"><img class="logo" src="../imagens/logo.png" alt=""></a>
 
-
         <input type="checkbox" id="nav_check" hidden>
 
         <nav>
-            <ul>
+            <ul class="menu">
                 <li>
                     <a href="paginaPrincipal.html">Home</a>
                 </li>
+                <br><br>
                 <li>
                     <a href="paginaInformacoes.html">Informações</a>
                 </li>
-
+                <br><br>
                 <li>
                     <a href="#" class="active"> Achados </a>
                 </li>
+                <br><br>
                 <li>
                     <a href="paginaPerdidos.html">Perdidos</a>
+                </li><br>
+
+                <li id="submenu">
                 </li>
-                <li>
-                    <a onclick="perfil();" id="nome"> </a>
-                </li>
-                <li>
-                    <div id="deslogar"></div>
-                </li>
+
             </ul>
         </nav>
 
@@ -59,9 +58,7 @@
         </label>
     </header>
 
-
     <br>
-
 
     <main>
         <div class="cont1">
@@ -73,19 +70,12 @@
         <div id="noLogin">
         </div>
 
-
-        <div style="display: flex; flex-wrap:wrap; flex-direction: row; justify-content: center;" id="achados">
+        <div class="produtos" id="achados">
         </div>
-
-
     </main>
 
-    
-
-    <!-- Botão whatsapp-->
      <div id="botaoCadastro">
      </div>
-    <!--Botão whatsapp -->
 
     <script src="../constantes.js"></script>
     <script src="../produtos/deletarProdutos.js"></script>
@@ -93,5 +83,4 @@
     <script src="../usuarios/apiUsuarios.js"></script>
     <script src="../usuarios/mostrarPerfil.js"></script>
 </body>
-
 </html>

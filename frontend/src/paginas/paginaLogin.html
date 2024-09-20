@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
 	<title>Login e Cadastro</title>
@@ -38,8 +38,8 @@
 													<input type="password" class="form-style" id="senhaLogin"
 														name="senha" placeholder="digite sua senha..." required />
 													<i class="input-icon uil uil-lock-alt"></i>
-													<i onclick="verSenhaLogin();" style="left: 20rem;"
-														class="input-icon uil-eye"></i>
+													<i onclick="verSenha('senhaLogin');"
+														class="input-icon uil-eye eyes"></i>
 													<br>
 												</div>
 
@@ -53,10 +53,7 @@
 									</div>
 								</div>
 
-
-
 								<!-- registrar  -->
-
 
 								<div class="card-back">
 									<div class="center-wrap">
@@ -80,8 +77,9 @@
 														placeholder="digite sua Senha..." name="senha"
 														id="senhaCadastro" required />
 													<i class="input-icon uil uil-lock-alt"></i>
-													<i onclick="verSenhaCadastro();" style="left: 20rem;"
-														class="input-icon uil-eye"></i>
+													<i  onclick="verSenha('senhaCadastro');"
+												
+													class="input-icon uil-eye eyes"></i>
 												</div>
 												<br>
 												<input type="submit" class="btn mt-4" value="enviar" />
@@ -95,13 +93,14 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
 
 
-
-			<script src="../constantes.js"></script>
-			<script src="../usuarios/senha.js"></script>
-			<script src="../usuarios/login.js"></script>
-			<script src="../usuarios/CadastroUsuarios.js"></script>
+	<script src="../constantes.js"></script>
+	<script src="../usuarios/senha.js"></script>
+	<script src="../usuarios/login.js"></script>
+	<script src="../usuarios/CadastroUsuarios.js"></script>
 </body>
 
 </html>

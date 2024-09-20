@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../cssGeral/cards.css">
+    <link rel="stylesheet" href="../cssGeral/card.css">
     <link rel="stylesheet" href="../cssGeral/style.css">
     <link rel="stylesheet" href="../cssGeral/add.css">
     <link rel="stylesheet" href="../cssGeral/contato.css">
+    <link rel="stylesheet" href="../cssGeral/nav.css">
     <link rel="icon" href="../imagens/icon.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,29 +25,26 @@
     <header>
         <a href="#"><img class="logo" src="../imagens/logo.png" alt=""></a>
 
-
         <input type="checkbox" id="nav_check" hidden>
 
         <nav>
-            <ul>
+            <ul class="menu">
                 <li>
                     <a href="paginaPrincipal.html">Home</a>
-                </li>
+                </li><br><br>
                 <li>
                     <a href="paginaInformacoes.html">Informações</a>
-                </li>
+                </li><br><br>
 
                 <li>
-                    <a href="#" class="active"> Achados </a>
-                </li>
+                    <a id="linkAchados" href="paginaAchados.html"> Achados </a>
+                </li><br><br>
+
                 <li>
-                    <a href="paginaPerdidos.html">Perdidos</a>
-                </li>
-                <li>
-                    <a onclick="perfil();" id="nome"> </a>
-                </li>
-                <li>
-                    <div id="deslogar"></div>
+                    <a id="linkPerdidos" href="paginaPerdidos.html">Perdidos</a>
+                </li><br><br>
+                
+                <li id="submenu">
                 </li>
             </ul>
         </nav>
@@ -58,27 +56,22 @@
         </label>
     </header>
 
-
-
-
-
-
-
     <section class="secao4">
         <div class="centro">
-            <div class="secao4-div">
-                <div class="secao4-div-card">
+            <div class="secao4-div-align">
+                <div class="secao4-div-showcard">
 
                     <input type="hidden" id="idCard" name="id" />
-                    
+
+                    <div id="img"></div>
+
                     <h3 id="nomeix" name="nome"> </h3>
 
                     <p id="local" name="local"></p>
-                    
+
                     <p id="descricao" name="descricao"></p>
 
                     <a href="javascript:history.back()" class="btn mt-4">Voltar</a>
-
                 </div>
             </div>
         </div>

@@ -1,12 +1,12 @@
 footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #000000; /* Cor de fundo do footer */
-    color: white; /* Cor do texto do footer */
-    text-align: center; /* Alinhamento do texto */
-    padding: 10px 0; /* Espaçamento interno */
-    z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  z-index: -1;
 }
 
 .regu {
@@ -52,16 +52,14 @@ footer {
   }
 
   h1 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
 }
 
 @media (max-widt: 767px) {
-
   .col-md-4 {
     flex: 0 0 100%;
     max-width: 100%;
   }
-
 }

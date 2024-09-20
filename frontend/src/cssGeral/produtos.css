@@ -152,6 +152,11 @@ h2 {
         width: 18rem;
     }
 
+    .text-content 
+    {
+        font-size: 1.0rem;
+    }
+
 }
 
 
@@ -179,4 +184,8 @@ h2 {
         width: 13rem;
     }
 
+    .text-content h1
+    {
+        font-size: 1.3rem;
+    }
 }

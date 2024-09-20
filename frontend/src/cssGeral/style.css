@@ -22,14 +22,14 @@
 }
 
 body {
-    background-color: #141B3E;
+    background: rgb(20, 27, 62);
+    background: linear-gradient(0deg, rgba(20, 27, 62, 1) 0%, rgba(74, 85, 143, 1) 35%, rgba(146, 201, 255, 1) 100%);
     background-size: cover;
+    background-repeat: no-repeat;
 }
-
 
 header {
     background: rgb(0 0 0 / 77%);
-    /* background: rgb(0 0 0 / 51%); */
     width: 100%;
     height: 70px;
     display: flex;
@@ -38,21 +38,18 @@ header {
     padding: 0 50px;
 }
 
-
 /* menu */
 
-    header .logo {
-        font-size: 1.7rem;
-        text-transform: uppercase;
-        color: white;
-        width: 17.8rem;
-    }
-
+header .logo {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: white;
+    width: 17.8rem;
+}
 
 header nav ul {
     display: flex;
 }
-
 
 header nav ul li a {
     display: inline-block;
@@ -64,8 +61,6 @@ header nav ul li a {
     transition: 0.2s;
     cursor: pointer;
 }
-
-
 
 header nav ul li a:hover,
 header nav ul li a.active {
@@ -101,10 +96,10 @@ header nav ul li a.active {
 
 .title {
     text-align: center;
-    color: #A3C2FF;
+    text-shadow: 0px -1px 0 white, 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0);
+    font-weight: 900;
+    font-size: 2.3rem;
 }
-
-
 
 .lg {
 
@@ -122,17 +117,15 @@ header nav ul li a.active {
     width: 100%;
 }
 
-
-
 .fund2 {
 
     border-radius: 16px;
- 
+
     background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
     align-items: center;
-   
+
     padding: 1rem;
     width: 100%;
 
@@ -140,8 +133,9 @@ header nav ul li a.active {
 
 .sub {
     display: flex;
-
+    font-weight: 900;
     font-size: 1.2rem;
+
 }
 
 .cont2 {
@@ -154,10 +148,9 @@ header nav ul li a.active {
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    border-right: 2px solid white;
+    border-right: 2px solid rgb(0, 0, 0);
     padding-right: 32px;
 }
-
 
 .bt {
     width: 17rem;
@@ -167,14 +160,12 @@ header nav ul li a.active {
     border-radius: 30px;
     border: none;
     transition: 1s;
-    background-color: #A3C2FF;
+    background-color: #000000;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: 900;
     padding: 0.6rem;
 }
-
-
 
 .bt:hover {
     transform: scale(1.1);
@@ -182,9 +173,12 @@ header nav ul li a.active {
 
 }
 
-
-
-
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
 
 /* menu */
 @media only screen and (max-width: 900px) {
@@ -198,20 +192,17 @@ header nav ul li a.active {
 }
 
 @media only screen and (max-width: 771px) {
-    
-    .cont2
-    {
+
+    .cont2 {
         border-right: 0px solid rgba(255, 255, 255, 0);
     }
 
-    .section
-    {
+    .section {
         display: flex;
         gap: 0rem;
     }
-    
-}
 
+}
 
 @media only screen and (max-width: 710px) {
     .hamburger {
@@ -243,26 +234,19 @@ header nav ul li a.active {
 }
 
 @media only screen and (max-width: 400px) {
-
-
     header .logo {
-       width: 12rem;
+        width: 12rem;
     }
 }
 
 /* fundo */
-
-
 
 @media (max-width: 934px) {
 
     .lg {
         width: 20rem;
     }
-
-
 }
-
 
 @media (max-width: 768px) {
     .section {
@@ -279,6 +263,7 @@ header nav ul li a.active {
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
+        align-items: center;
 
     }
 
@@ -290,7 +275,6 @@ header nav ul li a.active {
         justify-content: center;
     }
 
-
 }
 
 
@@ -300,8 +284,6 @@ header nav ul li a.active {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-
-
     }
 
     .fund2 {
@@ -310,24 +292,19 @@ header nav ul li a.active {
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
-
     }
 
     .lg {
         width: 15rem;
     }
-
-
 }
 
 @media (max-width: 376px) {
     .section {
         padding: 1rem;
-
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
-
     }
 
     .fund2 {
@@ -342,13 +319,9 @@ header nav ul li a.active {
     .lg {
         width: 15rem;
     }
-
-
 }
 
 @media (max-width: 540px) {
-
-
     .lg {
         width: 20rem;
     }
@@ -356,8 +329,6 @@ header nav ul li a.active {
 }
 
 @media (max-width: 370px) {
-
-
     .lg {
         width: 15rem;
     }

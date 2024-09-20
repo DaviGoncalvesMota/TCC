@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +17,6 @@
             <div class="row full-height justify-content-center">
                 <div class="col-12 text-center align-self-center py-5">
                     <div class="section pb-5 pt-5 pt-sm-2 text-center">
-
-
                         <label for="reg-log"></label>
                         <div class="card-3d-wrap mx-auto">
                             <div class="card-3d-wrapper">
@@ -29,7 +26,6 @@
                                             <h4 class="mb-4 pb-3">Editar Perfil</h4>
                                             <div class="form-group">
 
-
                                                 <form id="form-editar">
                                                     <div class="form-group mt-2">
                                                         <input type="text" class="form-style"
@@ -38,8 +34,7 @@
                                                         <i class="input-icon uil uil-user"></i>
                                                     </div>
 
-
-                                                    <div class="form-group mt-2 ">
+                                                    <div class="form-group mt-2">
                                                         <input type="email" class="form-style"
                                                             placeholder="digite seu email..." id="email" name="email" required />
                                                         <i class="input-icon uil uil-at"></i>
@@ -49,7 +44,7 @@
                                                         <input type="password" class="form-style"
                                                             placeholder="digite sua Senha..." id="senhaEditar" name="senha" required />
                                                         <i class="input-icon uil uil-lock-alt"></i>
-                                                        <i onclick="verSenhaEditar();" style="left: 20rem;" class="input-icon uil-eye"></i>
+                                                        <i onclick="verSenha('senhaEditar');" style="left: 20rem;" class="input-icon uil-eye"></i>
                                                     </div>
 
                                                     <input class="btn mt-4" type="submit" value="enviar" />
@@ -66,7 +61,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="../constantes.js"></script>
     <script src="../usuarios/senha.js"></script>
