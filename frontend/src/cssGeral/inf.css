@@ -7,6 +7,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+   
 }
 
 .section {
@@ -17,7 +18,7 @@
     align-items: center;
     flex-wrap: nowrap;
    
-    padding: 4rem;
+    padding: 7rem;
 
 }
 
@@ -197,7 +198,7 @@ header nav ul li a.active {
     align-content: center;
     flex-direction: column;
     border-right: 2px solid rgb(0, 0, 0);
-    padding-right: 60px;
+    padding-right: 100px;
 }
 
 
@@ -259,7 +260,7 @@ header nav ul li a.active {
 }
 
 
-@media only screen and (max-width: 710px) {
+@media only screen and (max-width: 987px) {
     .hamburger {
         display: block;
     }
@@ -284,7 +285,7 @@ header nav ul li a.active {
     }
 
     header nav ul li a {
-        margin: 5px 0;
+        margin: 0px 0;
     }
 }
 

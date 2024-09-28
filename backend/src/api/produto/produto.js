@@ -6,7 +6,8 @@ const produtoSchema = new mongoose.Schema({
     local: {type: String, required: true},
     categoria: {type: String, required: true},
     descricao: {type: String, required: false}, 
-    imagem: {type: String, required: false}
+    imagemPrincipal: {type: String, required: false},
+    imagemEntrega: {type: String, required: false},
 })
 
 module.exports = restful.model('Produto', produtoSchema)

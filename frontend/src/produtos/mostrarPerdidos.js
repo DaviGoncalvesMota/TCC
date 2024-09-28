@@ -32,12 +32,12 @@ function exibirPerdidosNaTela(listaDeProdutos) {
                     <button class="btn"> Editar </button> 
                 </a>
                     <button class="btn" onclick="deletar('${produto._id}');"> Excluir </button>
-                    <a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver Produto </a>
+                    <a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver objeto </a>
                 `;
         }
 
         if(id != undefined || id != null){
-            var card = `<a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver Produto </a>`
+            var card = `<a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver objeto </a>`
         }
         else {
             elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =

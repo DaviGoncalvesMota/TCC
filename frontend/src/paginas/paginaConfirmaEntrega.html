@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../cssGeral/cadastro.css">
+    <link rel="icon" href="../imagens/icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> cadastro de achados </title>
+</head>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="row full-height justify-content-center">
+                <div class="col-12 text-center align-self-center py-5">
+                    <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                        <label for="reg-log"></label>
+                        <div class="card-3d-wrap mx-auto">
+                            <div class="card-3d-wrapper">
+                                <div class="card-front">
+                                    <div class="center-wrap">
+                                        <div class="section text-center">
+                                            <h4 class="mb-4 pb-3"> Confirmar Entrega</h4>
+                                            <div class="form-group">
+
+                                                <input type="hidden" id="idEntrega" name="id" />
+
+                                                <form id="formEntrega" enctype="multipart/form-data">
+    
+                                                    <div class="form-group mt-2">
+                                                        <i class="input-icon ph ph-image"></i>
+                                                        <label for='selecao-arquivo' class="form-style">Escolha sua foto</label>
+                                                        <input type="file" id="selecao-arquivo" placeholder="Sua Foto" /> 
+                                                        <input type="hidden" id="imagem" name="imagemEntrega"/>
+                                                    </div>
+
+                                                    <div id="imgSubir">
+                                                    </div>
+
+                                                    <input class="btn mt-3" type="submit" value="Enviar" id="btnEntrega">
+                                                    <a href="javascript:history.back()" class="btn mt-3">Voltar</a>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../constantes.js"></script>
+    <script src="../produtos/confirmaEntrega.js"></script>
+
+</body>
+</html>

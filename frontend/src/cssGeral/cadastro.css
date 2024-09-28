@@ -208,3 +208,11 @@ img {
 }
 
 
+  @media (max-width: 400px) {
+    .section{
+      position: relative;
+      width: 97%;
+      display: block;
+    }
+}
+

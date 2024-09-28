@@ -9,7 +9,6 @@ function exibirUsuarioNaTela() {
         submenu.innerHTML += `<a> ${nomeExibir} </a>`
 
         submenu.innerHTML += 
-    
         `
         <ul class="drop-down">
             <li onclick="deslogar()">Sair</li>

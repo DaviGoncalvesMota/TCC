@@ -32,11 +32,11 @@ function exibirAchadosNaTela(listaDeProdutos) {
                     <button class="btn"> Editar </button> 
                 </a>
                     <button class="btn" onclick="deletar('${produto._id}');"> Excluir </button>
-                    <a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver Produto </a>
+                    <a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver objeto </a>
                 `;
         }
         if (id != undefined || id != null) {
-            var card = `<a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver Produto </a>`
+            var card = `<a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver objeto </a>`
         }
         else {
             elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =
@@ -56,7 +56,7 @@ function exibirAchadosNaTela(listaDeProdutos) {
             <div class="centro">
                 <div class="secao4-div">
                     <div class="secao4-div-card">
-                        <img class="imgs" src="${produto.imagem}" />
+                        <img class="imgs" src="${produto.imagemPrincipal}" />
                         <h3> ${produto.nome} </h3> 
                         <p> ${produto.local} </p>
                         ${alterar || card || vazio}
@@ -78,6 +78,6 @@ input.addEventListener("keypress", function (evento) {
             headers: {
                 'content-type': 'application/json'
             }
-        }).then(res => res.json().then(data => { exibirAchadosNaTela(data) }))
+        }).then(res => res.json().then(data => {exibirAchadosNaTela(data)}))
     }
 });

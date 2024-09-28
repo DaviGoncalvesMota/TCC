@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../cssGeral/cardperdidos.css">
+    <link rel="stylesheet" href="../cssGeral/cardentregues.css">
     <link rel="stylesheet" href="../cssGeral/achados.css">
     <link rel="stylesheet" href="../cssGeral/style.css">
     <link rel="stylesheet" href="../cssGeral/add.css">
     <link rel="stylesheet" href="../cssGeral/contato.css">
     <link rel="stylesheet" href="../cssGeral/nav.css">
     <link rel="icon" href="../imagens/icon.png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap">
 
-    <title>Pagina Perdidos</title>
+    <title>Pagina Achados</title>
 
 </head>
-
 <body>
 
     <header>
         <a href="paginaPrincipal.html"><img class="logo" src="../imagens/logo.png" alt=""></a>
-
 
         <input type="checkbox" id="nav_check" hidden>
 
@@ -32,24 +31,27 @@
             <ul class="menu">
                 <li>
                     <a href="paginaPrincipal.html">Home</a>
-                </li><br><br>
+                </li>
+                <br><br>
                 <li>
                     <a href="paginaInformacoes.html">Informações</a>
-                </li><br><br>
-
+                </li>
+                <br><br>
                 <li>
                     <a href="paginaAchados.html"> Achados </a>
-                </li><br><br>
+                </li>
+                <br><br>
                 <li>
-                    <a href="#" class="active">Perdidos</a>
-                </li><br> <br>
+                    <a href="paginaPerdidos.html">Perdidos</a>
+                </li><br><br>
 
                 <li>
-                    <a id="linkEntregues" href="../paginas/paginaEntregues.html"> Entregues </a>
+                    <a href="#" class="active"> Entregues </a>
                 </li><br><br>
 
                 <li id="submenu">
                 </li>
+
             </ul>
         </nav>
 
@@ -72,21 +74,18 @@
         <div id="noLogin">
         </div>
 
-        <div class="produtos" id="perdidos">
+        <div class="produtos" id="entregues">
         </div>
-
     </main>
 
-    <!-- Botão Cadastro-->
-    <div id="botaoCadastro">
-    </div> 
-    <!--Botão Cadastro -->
+     <div id="botaoCadastro">
+     </div>
 
     <script src="../constantes.js"></script>
-    <script src="../produtos/deletarProdutos.js"></script>
-    <script src="../produtos/mostrarPerdidos.js"></script>
+    <script src="../produtos/mostrarEntregues.js"></script>
     <script src="../usuarios/apiUsuarios.js"></script>
     <script src="../usuarios/mostrarPerfil.js"></script>
-</body>
+    <script src="../produtos/deletarProdutos.js"></script>
 
+</body>
 </html>
