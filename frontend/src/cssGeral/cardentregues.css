@@ -100,15 +100,19 @@ a.btn
     flex-direction: column;
     align-items: center;
     width: 25rem;
-    margin: 10px;
+    margin: 11px;
     padding: 20px;
     box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     background-color: #00000085;
     transition: all 0.5s ease;
-    gap: 1.2rem;
+    gap: 1rem;
     padding: 3rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
 }
+
 
 .secao4-div-card:hover 
 {
@@ -145,8 +149,8 @@ a.btn
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
     .secao4-div-card {
-        width: 22rem;
-        height: 35rem;
+        width: 17rem;
+        height: 29rem;
     }
 }
 
@@ -156,6 +160,6 @@ a.btn
     }
     .secao4-div-card {
         width: 17rem;
-        height: 35rem;
+        height: 29rem;
     }    
 }

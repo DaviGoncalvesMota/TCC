@@ -215,7 +215,7 @@ img {
 
   .eyes
   {
-    left: 17rem;
+    left: 18rem;
   }
 
 }
@@ -223,15 +223,15 @@ img {
 
   .eyes
   {
-    left: 14rem;
+    left: 14.8rem;
   }
 
 }
-@media (max-width: 361px) {
+@media (max-width: 372px) {
 
   .eyes
   {
-    left: 11rem;
+    left: 12.8rem;
   }
 
 }
