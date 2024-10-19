@@ -39,6 +39,9 @@ function exibirAchadosNaTela(listaDeProdutos) {
             var card = `<a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver objeto </a>`
         }
         else {
+            if(listaDeProdutos == ""){
+
+            }
             elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =
                 `
             <p class="cont1">

@@ -1,4 +1,4 @@
-const endpointDaApiProdutos = `${baseURL}/api/produtos`;
+const endpointDaApiProdutos = `${baseURL}/api/produtos?categoria=Entregue`;
 
 getBuscarEntregues()
 async function getBuscarEntregues() {
@@ -12,35 +12,44 @@ const elementoParaInserirTextoDeUsuarioNaoLogado = document.getElementById('noLo
 let input = document.getElementById("pesquisa");
 let id = localStorage.getItem('id');
 
-function exibirEntreguesNaTela(listaDeProdutos){
+function exibirEntreguesNaTela(listaDeProdutos) {
+    if (listaDeProdutos == "") {
+        elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =
+            `
+         <p class="cont1">
+            Ainda não há objetos registrados
+         </p>
+        `
+    }
+    else if(listaDeProdutos != "" && id == null || id == undefined){
+        elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =
+        `
+        <p class="cont1">
+            Para saber mais detalhes dos produtos, faça login 
+        </p>
+        `
+    }
+
     elementoParaInserirEntregues.innerHTML = '';
     listaDeProdutos.forEach(produto => {
-        if(id == secretaria){
+        if (id == secretaria) {
             var imagemEntrega = `<img class="imgs" src="${produto.imagemEntrega}" />`
-            var deletar = 
-            `
+            var deletar =
+                `
             <a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver objeto </a>
             <button class="btn" onclick="deletar('${produto._id}');"> Excluir </button>
             `
         }
-        if(id != null || id != undefined){
+        if (id != null || id != undefined) {
             var imagemPrincipal = `<img class="imgs" src="${produto.imagemPrincipal}" />`
             var card = `<a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver objeto </a>`
         }
         else {
             var imagemSemLogin = `<img class="imgs" src="${produto.imagemPrincipal}" />`
-            elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =
-            `
-            <p class="cont1">
-                Para saber mais detalhes dos produtos, faça login 
-            </p>
-            `
 
             var vazio = "";
         }
-
-        if (produto.categoria === "Entregue") {
-            elementoParaInserirEntregues.innerHTML += `
+        elementoParaInserirEntregues.innerHTML += `
         <section class="secao4">
             <div class="centro">
                 <div class="secao4-div">
@@ -54,9 +63,10 @@ function exibirEntreguesNaTela(listaDeProdutos){
             </div>
         </section>
         `
-        }
-    })
+    }
+    )
 }
+
 
 input.addEventListener("keypress", function (evento) {
     if (evento.key === "Enter") {
@@ -67,6 +77,6 @@ input.addEventListener("keypress", function (evento) {
             headers: {
                 'content-type': 'application/json'
             }
-        }).then(res => res.json().then(data => {exibirEntreguesNaTela(data)}))
+        }).then(res => res.json().then(data => { exibirEntreguesNaTela(data) }))
     }
 });
