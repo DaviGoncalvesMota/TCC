@@ -42,7 +42,7 @@ window.addEventListener('load', () => {
         if(idUser == secretaria && data.categoria == "Achados"){
             entregueBotao.innerHTML +=
             `
-                <a style="color: white;" href="../paginas/paginaConfirmaEntrega.html?id=${idCard}"><div class="btn mt-4"> Entregar  </a>
+                <a style="color: white;" href="../paginas/paginaConfirmaEntrega.html?id=${idCard}"><div class="btn mt-4"> Entregar </div></a>
             `
         }
     })   

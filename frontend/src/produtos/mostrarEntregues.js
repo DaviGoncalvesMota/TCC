@@ -1,4 +1,4 @@
-const endpointDaApiProdutos = `${baseURL}/api/produtos?categoria=Entregue`;
+const endpointDaApiProdutos = `${baseURL}/api/produtos`;
 
 getBuscarEntregues()
 async function getBuscarEntregues() {
@@ -21,9 +21,9 @@ function exibirEntreguesNaTela(listaDeProdutos) {
          </p>
         `
     }
-    else if(listaDeProdutos != "" && id == null || id == undefined){
+    else if (listaDeProdutos != "" && id == null || id == undefined) {
         elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =
-        `
+            `
         <p class="cont1">
             Para saber mais detalhes dos produtos, faça login 
         </p>
@@ -49,22 +49,24 @@ function exibirEntreguesNaTela(listaDeProdutos) {
 
             var vazio = "";
         }
-        elementoParaInserirEntregues.innerHTML += `
-        <section class="secao4">
-            <div class="centro">
-                <div class="secao4-div">
-                    <div class="secao4-div-card">
-                        ${imagemEntrega || imagemPrincipal || imagemSemLogin}
-                        <h3> ${produto.nome} </h3> 
-                        <p> ${produto.local} </p>
-                        ${deletar || card || vazio}
-                    </div>
-                </div>  
-            </div>
-        </section>
-        `
-    }
-    )
+
+        if (produto.categoria === "Entregue") {
+            elementoParaInserirEntregues.innerHTML += `
+            <section class="secao4">
+                <div class="centro">
+                    <div class="secao4-div">
+                        <div class="secao4-div-card">
+                            ${imagemEntrega || imagemPrincipal || imagemSemLogin}
+                            <h3> ${produto.nome} </h3> 
+                            <p> ${produto.local} </p>
+                            ${deletar || card || vazio}
+                        </div>
+                    </div>  
+                </div>
+            </section>
+            `
+        }
+    })
 }
 
 
