@@ -1,16 +1,21 @@
 const endpointDaApiProdutos = `${baseURL}/api/produtos`;
+const elementoParaInserirEntregues = document.getElementById('entregues');
+const elementoParaInserirTextoDeUsuarioNaoLogado = document.getElementById('noLogin');
+let input = document.getElementById("pesquisa");
+let id = localStorage.getItem('id');
+var loader = document.getElementById("loader");
+var content = document.getElementById("content");
+
+content.style.display = "none"
 
 getBuscarEntregues()
 async function getBuscarEntregues() {
     const prod = await fetch(endpointDaApiProdutos)
     let entregues = await prod.json();
     exibirEntreguesNaTela(entregues);
+    loader.style.display = "none",
+    content.style.display = "block"
 }
-
-const elementoParaInserirEntregues = document.getElementById('entregues');
-const elementoParaInserirTextoDeUsuarioNaoLogado = document.getElementById('noLogin');
-let input = document.getElementById("pesquisa");
-let id = localStorage.getItem('id');
 
 function exibirEntreguesNaTela(listaDeProdutos) {
     if (listaDeProdutos == "") {

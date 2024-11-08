@@ -1,17 +1,22 @@
 const endpointDaApiProdutos = `${baseURL}/api/produtos`;
+const elementoParaInserirPerdidos = document.getElementById('perdidos');
+const elementoParaInserirTextoDeUsuarioNaoLogado = document.getElementById('noLogin');
+const elementoParaInserirBotaoCadastro = document.getElementById('botaoCadastro');
+let input = document.getElementById('pesquisa');
+let id = localStorage.getItem('id');
+var loader = document.getElementById("loader");
+var content = document.getElementById("content");
+
+content.style.display = "none"
 
 getBuscarPerdidos()
 async function getBuscarPerdidos() {
     const prod = await fetch(endpointDaApiProdutos)
     let perdidos = await prod.json();
     exibirPerdidosNaTela(perdidos);
+    loader.style.display = "none",
+    content.style.display = "block"
 }
-
-const elementoParaInserirPerdidos = document.getElementById('perdidos');
-const elementoParaInserirTextoDeUsuarioNaoLogado = document.getElementById('noLogin');
-const elementoParaInserirBotaoCadastro = document.getElementById('botaoCadastro');
-let input = document.getElementById('pesquisa');
-let id = localStorage.getItem('id');
 
 function exibirPerdidosNaTela(listaDeProdutos) {
     elementoParaInserirPerdidos.innerHTML = '';
@@ -77,6 +82,6 @@ input.addEventListener("keypress", function (evento) {
             headers: {
                 'content-type': 'application/json'
             }
-        }).then(res => res.json().then(data => {exibirPerdidosNaTela(data) }))
+        }).then(res => res.json().then(data => { exibirPerdidosNaTela(data) }))
     }
 });

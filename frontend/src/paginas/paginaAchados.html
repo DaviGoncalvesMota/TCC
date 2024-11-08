@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../cssGeral/add.css">
     <link rel="stylesheet" href="../cssGeral/contato.css">
     <link rel="stylesheet" href="../cssGeral/nav.css">
+    <link rel="stylesheet" href="../cssGeral/telaCarregar.css">
     <link rel="icon" href="../imagens/icon.png">
     <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,66 +21,77 @@
     <title>Pagina Achados</title>
 
 </head>
+
 <body>
 
-    <header>
-        <a href="paginaPrincipal.html"><img class="logo" src="../imagens/logo.png" alt=""></a>
+    <!-- Tela de Carregamento -->
+    <div id="loader" class="overlay">
+        <div class="loader"></div>
+    </div>
 
-        <input type="checkbox" id="nav_check" hidden>
+    <!-- Conteudo da Pagina-->
+    <div id="content">
+        <header>
+            <a href="paginaPrincipal.html"><img class="logo" src="../imagens/logo.png" alt=""></a>
 
-        <nav>
-            <ul class="menu">
-                <li>
-                    <a href="paginaPrincipal.html">Home</a>
-                </li>
-                <br><br>
-                <li>
-                    <a href="paginaInformacoes.html">Informações</a>
-                </li>
-                <br><br>
-                <li>
-                    <a href="#" class="active"> Achados </a>
-                </li>
-                <br><br>
-                <li>
-                    <a href="paginaPerdidos.html">Perdidos</a>
-                </li><br><br>
+            <input type="checkbox" id="nav_check" hidden>
 
-                <li>
-                    <a id="linkEntregues" href="../paginas/paginaEntregues.html"> Entregues </a>
-                </li><br><br>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="paginaPrincipal.html">Home</a>
+                    </li>
+                    <br><br>
+                    <li>
+                        <a href="paginaInformacoes.html">Informações</a>
+                    </li>
+                    <br><br>
+                    <li>
+                        <a href="#" class="active"> Achados </a>
+                    </li>
+                    <br><br>
+                    <li>
+                        <a href="paginaPerdidos.html">Perdidos</a>
+                    </li><br><br>
 
-                <li id="submenu">
-                </li>
+                    <li>
+                        <a id="linkEntregues" href="../paginas/paginaEntregues.html"> Entregues </a>
+                    </li><br><br>
 
-            </ul>
-        </nav>
+                    <li id="submenu">
+                    </li>
 
-        <label for="nav_check" class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </label>
-    </header>
+                </ul>
+            </nav>
 
-    <br>
+            <label for="nav_check" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </header>
 
-    <main>
-        <div class="cont1">
-            <div id="divBusca">
-                <input type="text" id="pesquisa" placeholder="Buscar..." />
+        <br>
+
+        <main>
+            <div class="cont1">
+                <div id="divBusca">
+                    <input type="text" id="pesquisa" placeholder="Buscar..." />
+                </div>
             </div>
-        </div>
 
-        <div id="noLogin">
-        </div>
+            <div id="noLogin">
+            </div>
 
-        <div class="produtos" id="achados">
-        </div>
-    </main>
+            <div class="produtos" id="achados">
+            </div>
 
-     <div id="botaoCadastro">
-     </div>
+            <!-- Botao Cadastro -->
+            <div id="botaoCadastro">
+            </div>
+
+        </main>
+    </div>
 
     <script src="../constantes.js"></script>
     <script src="../produtos/deletarProdutos.js"></script>
@@ -87,4 +99,5 @@
     <script src="../usuarios/apiUsuarios.js"></script>
     <script src="../usuarios/mostrarPerfil.js"></script>
 </body>
+
 </html>

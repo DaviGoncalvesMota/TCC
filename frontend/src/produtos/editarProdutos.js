@@ -1,4 +1,6 @@
 const form = document.getElementById('form-api');
+var loader = document.getElementById("loader");
+var content = document.getElementById("content");
 
 form.addEventListener('submit', evento => {
     evento.preventDefault(); 
@@ -40,6 +42,9 @@ window.addEventListener('load', evento => {
         document.getElementById('nome').value = data.nome;
         document.getElementById('local').value = data.local;
         document.getElementById('descricao').value = data.descricao;
+
+        loader.style.display = "none",
+        content.style.display = "block"
     } )    
    
 })

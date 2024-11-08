@@ -1,17 +1,22 @@
 const endpointDaApiProdutos = `${baseURL}/api/produtos`;
+const elementoParaInserirAchados = document.getElementById('achados');
+const elementoParaInserirTextoDeUsuarioNaoLogado = document.getElementById('noLogin');
+const elementoParaInserirBotaoCadastro = document.getElementById('botaoCadastro');
+let input = document.getElementById("pesquisa");
+let id = localStorage.getItem('id');
+var loader = document.getElementById("loader");
+var content = document.getElementById("content");
+
+content.style.display = "none"
 
 getBuscarAchados()
 async function getBuscarAchados() {
     const prod = await fetch(endpointDaApiProdutos)
     let achados = await prod.json();
     exibirAchadosNaTela(achados);
+    loader.style.display = "none",
+    content.style.display = "block"
 }
-
-const elementoParaInserirAchados = document.getElementById('achados');
-const elementoParaInserirTextoDeUsuarioNaoLogado = document.getElementById('noLogin');
-const elementoParaInserirBotaoCadastro = document.getElementById('botaoCadastro');
-let input = document.getElementById("pesquisa");
-let id = localStorage.getItem('id');
 
 function exibirAchadosNaTela(listaDeProdutos) {
     elementoParaInserirAchados.innerHTML = '';
@@ -39,9 +44,6 @@ function exibirAchadosNaTela(listaDeProdutos) {
             var card = `<a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver objeto </a>`
         }
         else {
-            if(listaDeProdutos == ""){
-
-            }
             elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =
                 `
             <p class="cont1">
@@ -81,6 +83,6 @@ input.addEventListener("keypress", function (evento) {
             headers: {
                 'content-type': 'application/json'
             }
-        }).then(res => res.json().then(data => {exibirAchadosNaTela(data)}))
+        }).then(res => res.json().then(data => { exibirAchadosNaTela(data) }))
     }
 });

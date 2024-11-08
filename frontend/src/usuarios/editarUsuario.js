@@ -1,4 +1,7 @@
 const form = document.getElementById('form-editar');
+var loader = document.getElementById("loader");
+var content = document.getElementById("content");
+
 
 form.addEventListener('submit', evento => {
     evento.preventDefault();
@@ -37,5 +40,9 @@ form.addEventListener('submit', evento => {
             document.getElementById('nome').value = data.nome;
             document.getElementById('email').value = data.email;
             document.getElementById('senhaEditar').value = data.senha;
+
+            loader.style.display = "none",
+            content.style.display = "block"
+            
         })
     }))

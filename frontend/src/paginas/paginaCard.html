@@ -10,80 +10,87 @@
     <link rel="stylesheet" href="../cssGeral/add.css">
     <link rel="stylesheet" href="../cssGeral/contato.css">
     <link rel="stylesheet" href="../cssGeral/nav.css">
+    <link rel="stylesheet" href="../cssGeral/telaCarregar.css">
     <link rel="icon" href="../imagens/icon.png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap">
 
     <title>Pagina Achados</title>
 
 </head>
 
 <body>
+    <!-- Tela de Carregamento -->
+    <div id="loader" class="overlay">
+        <div class="loader"></div>
+    </div>
 
-    <header>
-        <a href="#"><img class="logo" src="../imagens/logo.png" alt=""></a>
+    <!-- Conteudo da Pagina -->
+    <div id="content">
+        <header>
+            <a href="#"><img class="logo" src="../imagens/logo.png" alt=""></a>
 
-        <input type="checkbox" id="nav_check" hidden>
+            <input type="checkbox" id="nav_check" hidden>
 
-        <nav>
-            <ul class="menu">
-                <li>
-                    <a href="paginaPrincipal.html">Home</a>
-                </li><br><br>
-                <li>
-                    <a href="paginaInformacoes.html">Informações</a>
-                </li><br><br>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="paginaPrincipal.html">Home</a>
+                    </li><br><br>
+                    <li>
+                        <a href="paginaInformacoes.html">Informações</a>
+                    </li><br><br>
 
-                <li>
-                    <a id="linkAchados" href="paginaAchados.html"> Achados </a>
-                </li><br><br>
+                    <li>
+                        <a id="linkAchados" href="paginaAchados.html"> Achados </a>
+                    </li><br><br>
 
-                <li>
-                    <a id="linkPerdidos" href="paginaPerdidos.html">Perdidos</a>
-                </li><br><br>
+                    <li>
+                        <a id="linkPerdidos" href="paginaPerdidos.html">Perdidos</a>
+                    </li><br><br>
 
-                <li>
-                    <a id="linkEntregues" href="../paginas/paginaEntregues.html"> Entregues </a>
-                </li><br><br>
-                
-                <li id="submenu">
-                </li>
-            </ul>
-        </nav>
+                    <li>
+                        <a id="linkEntregues" href="../paginas/paginaEntregues.html"> Entregues </a>
+                    </li><br><br>
 
-        <label for="nav_check" class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </label>
-    </header>
+                    <li id="submenu">
+                    </li>
+                </ul>
+            </nav>
 
-    <section class="secao4">
-        <div class="centro">
-            <div class="secao4-div-align">
-                <div class="secao4-div-showcard">
+            <label for="nav_check" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </header>
 
-                    <input type="hidden" id="idCard" name="id" />
+        <section class="secao4">
+            <div class="centro">
+                <div class="secao4-div-align">
+                    <div class="secao4-div-showcard">
 
-                    <div id="img"></div>
+                        <input type="hidden" id="idCard" name="id" />
 
-                    <h3 id="nomeix" name="nome"> </h3>
+                        <div id="img"></div>
 
-                    <p id="local" name="local"></p>
+                        <h3 id="nomeix" name="nome"> </h3>
 
-                    <p id="descricao" name="descricao"></p>
+                        <p id="local" name="local"></p>
 
-                    <div id="entrega">
+                        <p id="descricao" name="descricao"></p>
+
+                        <div id="entrega">
+                        </div>
+
+                        <a href="javascript:history.back()" class="btn mt-4">Voltar</a>
                     </div>
-
-                    <a href="javascript:history.back()" class="btn mt-4">Voltar</a>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </div>
 
 
     <script src="../constantes.js"></script>

@@ -8,8 +8,11 @@ const linkAchados = document.getElementById('linkAchados');
 const linkPerdidos = document.getElementById('linkPerdidos');
 const linkEntregues = document.getElementById('linkEntregues');
 const entregueBotao = document.getElementById('entrega');
+var loader = document.getElementById("loader");
+var content = document.getElementById("content");
 
 window.addEventListener('load', () => {
+
     const queryString = window.location.search;
     const idCard = queryString.replace("?id=", "");
 
@@ -45,6 +48,10 @@ window.addEventListener('load', () => {
                 <a style="color: white;" href="../paginas/paginaConfirmaEntrega.html?id=${idCard}"><div class="btn mt-4"> Entregar </div></a>
             `
         }
-    })   
+
+        loader.style.display = "none",
+        content.style.display = "block"
+
+    })  
 })
 
