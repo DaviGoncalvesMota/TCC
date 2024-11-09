@@ -1,6 +1,6 @@
 const endpointDaApiProdutos = `${baseURL}/api/produtos`;
 const elementoParaInserirEntregues = document.getElementById('entregues');
-const elementoParaInserirTextoDeUsuarioNaoLogado = document.getElementById('noLogin');
+const elementoParaInserirTextoDeProdutos = document.getElementById('mensagem');
 let input = document.getElementById("pesquisa");
 let id = localStorage.getItem('id');
 var loader = document.getElementById("loader");
@@ -18,22 +18,24 @@ async function getBuscarEntregues() {
 }
 
 function exibirEntreguesNaTela(listaDeProdutos) {
-    if (listaDeProdutos == "") {
-        elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =
+    fetch(`${baseURL}/api/produtos?categoria=Entregue`).then(res => res.json()).then(data => {
+        if (data == "") {
+            elementoParaInserirTextoDeProdutos.innerHTML +=
             `
-         <p class="cont1">
-            Ainda não há objetos registrados
-         </p>
-        `
-    }
-    else if (listaDeProdutos != "" && id == null || id == undefined) {
-        elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =
+            <p class="cont1">
+                Ainda não há objetos registrados
+            </p>
             `
-        <p class="cont1">
-            Para saber mais detalhes dos produtos, faça login 
-        </p>
-        `
-    }
+        }
+        else if (data != "" && id == "" || id == null || id == undefined) {
+            elementoParaInserirTextoDeProdutos.innerHTML =
+            `
+            <p class="cont1">
+                Para saber mais detalhes dos produtos, faça login 
+            </p>
+            `
+        }
+    })
 
     elementoParaInserirEntregues.innerHTML = '';
     listaDeProdutos.forEach(produto => {
@@ -79,11 +81,17 @@ input.addEventListener("keypress", function (evento) {
     if (evento.key === "Enter") {
         evento.preventDefault();
         const valorInput = document.getElementById("pesquisa").value;
+
+        loader.style.display = "flex"
+
         fetch(`${baseURL}/api/buscarproduto?nome=${valorInput}`, {
             method: "GET",
             headers: {
                 'content-type': 'application/json'
             }
-        }).then(res => res.json().then(data => { exibirEntreguesNaTela(data) }))
+        }).then(res => res.json().then(data => {
+            exibirEntreguesNaTela(data)
+            loader.style.display = "none"
+        }))
     }
 });

@@ -2,6 +2,7 @@ const form = document.getElementById('form-editar');
 var loader = document.getElementById("loader");
 var content = document.getElementById("content");
 
+content.style.display = "none"
 
 form.addEventListener('submit', evento => {
     evento.preventDefault();
@@ -30,6 +31,7 @@ form.addEventListener('submit', evento => {
 },
 
     window.addEventListener('load', () => {
+        
         const id = localStorage.getItem('id');
         fetch(`${baseURL}/api/users/${id}`, {
             method: 'GET',

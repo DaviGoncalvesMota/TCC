@@ -1,6 +1,6 @@
 const endpointDaApiProdutos = `${baseURL}/api/produtos`;
 const elementoParaInserirAchados = document.getElementById('achados');
-const elementoParaInserirTextoDeUsuarioNaoLogado = document.getElementById('noLogin');
+const elementoParaInserirTextoDeProdutos = document.getElementById('mensagem');
 const elementoParaInserirBotaoCadastro = document.getElementById('botaoCadastro');
 let input = document.getElementById("pesquisa");
 let id = localStorage.getItem('id');
@@ -15,10 +15,29 @@ async function getBuscarAchados() {
     let achados = await prod.json();
     exibirAchadosNaTela(achados);
     loader.style.display = "none",
-    content.style.display = "block"
+        content.style.display = "block"
 }
 
 function exibirAchadosNaTela(listaDeProdutos) {
+    fetch(`${baseURL}/api/produtos?categoria=Achados`).then(res => res.json()).then(data => {
+        if (data == "") {
+            elementoParaInserirTextoDeProdutos.innerHTML +=
+                `
+            <p class="cont1">
+                Ainda não há objetos registrados
+            </p>
+            `
+        }
+        else if (data != "" && id == "" || id == null || id == undefined) {
+            elementoParaInserirTextoDeProdutos.innerHTML =
+                `
+            <p class="cont1">
+                Para saber mais detalhes dos produtos, faça login 
+            </p>
+            `
+        }
+    })
+
     elementoParaInserirAchados.innerHTML = '';
     if (id == secretaria) {
         elementoParaInserirBotaoCadastro.innerHTML += `
@@ -44,13 +63,6 @@ function exibirAchadosNaTela(listaDeProdutos) {
             var card = `<a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver objeto </a>`
         }
         else {
-            elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =
-                `
-            <p class="cont1">
-                Para saber mais detalhes dos produtos, faça login 
-            </p>
-                `
-
             var vazio = "";
         }
 
@@ -78,11 +90,17 @@ input.addEventListener("keypress", function (evento) {
     if (evento.key === "Enter") {
         evento.preventDefault();
         const valorInput = document.getElementById("pesquisa").value;
+
+        loader.style.display = "flex"
+
         fetch(`${baseURL}/api/buscarproduto?nome=${valorInput}`, {
             method: "GET",
             headers: {
                 'content-type': 'application/json'
             }
-        }).then(res => res.json().then(data => { exibirAchadosNaTela(data) }))
+        }).then(res => res.json().then(data => {
+            exibirAchadosNaTela(data)
+            loader.style.display = "none"
+        }))
     }
 });

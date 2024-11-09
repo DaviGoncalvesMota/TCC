@@ -2,6 +2,8 @@ const form = document.getElementById('form-api');
 var loader = document.getElementById("loader");
 var content = document.getElementById("content");
 
+content.style.display = "none"
+
 form.addEventListener('submit', evento => {
     evento.preventDefault(); 
 
@@ -26,8 +28,7 @@ form.addEventListener('submit', evento => {
     })    
 })
 
-window.addEventListener('load', evento => {
-    evento.preventDefault();
+window.addEventListener('load', () => {
 
     const queryString = window.location.search;
     const id = queryString.replace("?id=", "");
@@ -45,7 +46,9 @@ window.addEventListener('load', evento => {
 
         loader.style.display = "none",
         content.style.display = "block"
-    } )    
+    } 
+
+)    
    
 })
 

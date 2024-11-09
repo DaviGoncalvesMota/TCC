@@ -1,6 +1,6 @@
 const endpointDaApiProdutos = `${baseURL}/api/produtos`;
 const elementoParaInserirPerdidos = document.getElementById('perdidos');
-const elementoParaInserirTextoDeUsuarioNaoLogado = document.getElementById('noLogin');
+const elementoParaInserirTextoDeProdutos = document.getElementById('mensagem');
 const elementoParaInserirBotaoCadastro = document.getElementById('botaoCadastro');
 let input = document.getElementById('pesquisa');
 let id = localStorage.getItem('id');
@@ -19,6 +19,25 @@ async function getBuscarPerdidos() {
 }
 
 function exibirPerdidosNaTela(listaDeProdutos) {
+    fetch(`${baseURL}/api/produtos?categoria=Perdidos`).then(res => res.json()).then(data => {
+        if (data == "") {
+            elementoParaInserirTextoDeProdutos.innerHTML +=
+            `
+            <p class="cont1">
+                Ainda não há objetos registrados
+            </p>
+            `
+        }
+        else if (data != "" && id == "" || id == null || id == undefined) {
+            elementoParaInserirTextoDeProdutos.innerHTML =
+            `
+            <p class="cont1">
+                Para saber mais detalhes dos produtos, faça login 
+            </p>
+            `
+        }
+    })
+
     elementoParaInserirPerdidos.innerHTML = '';
     if (id == secretaria) {
         elementoParaInserirBotaoCadastro.innerHTML += `
@@ -41,19 +60,12 @@ function exibirPerdidosNaTela(listaDeProdutos) {
                 `;
         }
 
-        if(id != undefined || id != null){
+        if (id != undefined || id != null) {
             var card = `<a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver objeto </a>`
         }
         else {
-            elementoParaInserirTextoDeUsuarioNaoLogado.innerHTML =
-               `
-           <p class="cont1">
-               Para saber mais detalhes dos produtos, faça login 
-           </p>
-               `
-
-           var vazio = "";
-       }
+            var vazio = "";
+        }
 
         if (produto.categoria === "Perdidos") {
             elementoParaInserirPerdidos.innerHTML += `
@@ -77,11 +89,17 @@ input.addEventListener("keypress", function (evento) {
     if (evento.key === "Enter") {
         evento.preventDefault();
         const valorInput = document.getElementById("pesquisa").value;
+
+        loader.style.display = "flex"
+
         fetch(`${baseURL}/api/buscarproduto?nome=${valorInput}`, {
             method: "GET",
             headers: {
                 'content-type': 'application/json'
             }
-        }).then(res => res.json().then(data => { exibirPerdidosNaTela(data) }))
+        }).then(res => res.json().then(data => {
+            exibirPerdidosNaTela(data)
+            loader.style.display = "none"
+        }))
     }
 });

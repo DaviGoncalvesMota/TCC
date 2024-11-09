@@ -10,6 +10,11 @@ const linkEntregues = document.getElementById('linkEntregues');
 const entregueBotao = document.getElementById('entrega');
 var loader = document.getElementById("loader");
 var content = document.getElementById("content");
+var header = document.getElementById("header");
+
+header.style.display = "none"
+content.style.display = "none"
+
 
 window.addEventListener('load', () => {
 
@@ -49,8 +54,9 @@ window.addEventListener('load', () => {
             `
         }
 
-        loader.style.display = "none",
+        loader.style.display = "none"
         content.style.display = "block"
+        header.style.display = "block"
 
     })  
 })
