@@ -6,7 +6,6 @@ const userSchema = new mongoose.Schema({
     email: {type: String, required: false},
     senha: {type: String, required: false},
     criadoEm: {type: Date, default: Date.now},
-    
 })
 
 module.exports = restful.model('User', userSchema)

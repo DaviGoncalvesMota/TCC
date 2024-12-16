@@ -42,7 +42,7 @@ function exibirEntreguesNaTela(listaDeProdutos) {
         if (id == secretaria) {
             var imagemEntrega = `<img class="imgs" src="${produto.imagemEntrega}" />`
             var deletar =
-                `
+            `
             <a class="btn" href="../paginas/paginaCard.html?id=${produto._id}"> Ver objeto </a>
             <button class="btn" onclick="deletar('${produto._id}');"> Excluir </button>
             `
